@@ -9,4 +9,4 @@
 #GNU General Public License for more details.
 #You should have received a copy of the GNU General Public License
 #along with raspberrymem.  If not, see http://www.gnu.org/licenses
-dialog --msgbox "unfortunately, accessibility support is not available in this version." 50 50
+dialog --msgbox "$(gettext -s snoa11y)" 50 50
