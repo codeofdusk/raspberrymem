@@ -1,0 +1,71 @@
+export DIALOGOPTS="--visit-items --ok-label \"$(gettext -s \"next\")\" --cancel-label \"$(gettext -s \"back\")\""
+export TEXTDOMAIN="raspberrymem"
+#Copyright 2013 - Bill Dengler
+#raspberrymem is free software: you can redistribute it and/or modify
+#it under the terms of the GNU General Public License as published by
+#the Free Software Foundation, either version 3 of the License, or
+#(at your option) any later version.
+#raspberrymem is distributed in the hope that it will be useful,
+#but WITHOUT ANY WARRANTY; without even the implied warranty of
+#MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#GNU General Public License for more details.
+#You should have received a copy of the GNU General Public License
+#along with raspberrymem.  If not, see http://www.gnu.org/licenses
+#export current raspberrymem location to a variable for execution of cron jobs and other scripts
+export raspberrymem_location="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+#version number, edit for new releases
+export version="3.0 beta 2 pre"
+UITEXT="client version $version you are at the main menu. Use the arrow keys to find an option, and then press enter to select it. Note that this is a menu, and so you can't just type into it."
+#initial oobe check
+if [ ! -d /etc/raspberrymem.prefs ]
+then
+./oobe
+fi
+#start the notification daemon
+./notificationd &
+while :
+do
+#pull latest code from git
+echo "please wait"
+git pull &> /dev/null
+if [ ! -d /etc/raspberrymem.prefs ]
+then
+exec ./oobe
+fi
+#insure we have a recurring-reminders directory
+if [ ! -d /etc/raspberrymem.prefs/recurring-reminders ]
+then
+mkdir /etc/raspberrymem.prefs/recurring-reminders
+fi
+if [ -f /etc/raspberrymem.prefs/alarming ]
+then
+./notifications
+fi
+#be sure we're registered
+if [ ! -f /etc/raspberrymem.prefs/deviceid ]
+then
+./register
+fi
+export USERSEL=$(dialog --no-cancel --stdout --menu "${UITEXT}" 50 50 5 1 "$(gettext -s reminders)" 2 "$(gettext -s timer)" 3 "$(gettext -s notes)" 4 "$(gettext -s settings)" "n" "$(gettext -s notifications)")
+if [ "$USERSEL" == "3" ]
+then
+./note-editor
+fi
+if [ "$USERSEL" == "2" ]
+
+then
+./timer
+fi
+if [ "$USERSEL" == "1" ]
+then
+./reminders
+fi
+if [ "$USERSEL" == "4" ]
+then
+./settings
+fi
+if [ "${USERSEL}" == "n" ]
+then
+./notifications
+fi
+done

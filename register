@@ -1,0 +1,31 @@
+#Copyright 2013 - Bill Dengler
+#raspberrymem is free software: you can redistribute it and/or modify
+#it under the terms of the GNU General Public License as published by
+#the Free Software Foundation, either version 3 of the License, or
+#(at your option) any later version.
+#raspberrymem is distributed in the hope that it will be useful,
+#but WITHOUT ANY WARRANTY; without even the implied warranty of
+#MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#GNU General Public License for more details.
+#You should have received a copy of the GNU General Public License
+#along with raspberrymem.  If not, see http://www.gnu.org/licenses
+#if we don't even have a server_host then exit
+if [ ! -f /etc/raspberrymem.prefs/server_host ]
+then
+exit
+fi
+export server_host=$(cat /etc/raspberrymem.prefs/server_host)
+gettext -s "registermsg"
+#register and then print the device ID to the correct file.
+echo "register" | nc $server_host 7777 &> /etc/raspberrymem.prefs/deviceid
+if [ $? != 0 ]
+then
+dialog --msgbox "$(gettext -s registerfailedmsg)" 50 50
+rm /etc/raspberrymem.prefs/deviceid
+else
+#delete blank lines
+sed -e '2d' /etc/raspberrymem.prefs/deviceid > /etc/raspberrymem.prefs/deviceid.fixed
+mv /etc/raspberrymem.prefs/deviceid.fixed /etc/raspberrymem.prefs/deviceid
+DEVICEID=$(cat /etc/raspberrymem.prefs/deviceid)
+dialog --msgbox "Your Raspberrymem device ID is $DEVICEID    please write it down if you wish to use Raspberrymem Remote Access." 50 50
+fi

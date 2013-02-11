@@ -1,0 +1,22 @@
+
+
+#Copyright 2013 - Bill Dengler
+#raspberrymem is free software: you can redistribute it and/or modify
+#it under the terms of the GNU General Public License as published by
+#the Free Software Foundation, either version 3 of the License, or
+#(at your option) any later version.
+#raspberrymem is distributed in the hope that it will be useful,
+#but WITHOUT ANY WARRANTY; without even the implied warranty of
+#MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#GNU General Public License for more details.
+#You should have received a copy of the GNU General Public License
+#along with raspberrymem.  If not, see http://www.gnu.org/licenses#find the text to store
+#get rid of .alarming for a moment, part of patch for issue #3
+if [ "$1" == "" ]
+then
+export TEXT="alarm"
+else
+export TEXT=$1
+fi
+touch /etc/raspberrymem.prefs/alarming
+echo "${TEXT}" >> /etc/raspberrymem.prefs/alarming

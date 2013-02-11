@@ -1,0 +1,47 @@
+#Copyright 2013 - Bill Dengler
+#raspberrymem is free software: you can redistribute it and/or modify
+#it under the terms of the GNU General Public License as published by
+#the Free Software Foundation, either version 3 of the License, or
+#(at your option) any later version.
+#raspberrymem is distributed in the hope that it will be useful,
+#but WITHOUT ANY WARRANTY; without even the implied warranty of
+#MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#GNU General Public License for more details.
+#You should have received a copy of the GNU General Public License
+#along with raspberrymem.  If not, see http://www.gnu.org/licenses
+#language selector, the only part of the program with hardcoded messages for obvious reasons.
+echo "for instructions in English, press 1 followed by the enter key."
+#I promise this will be the only Google Translated file
+echo "para instrucciones en español mexicano, pulse 2 seguido de la tecla Enter."
+read lang
+#generate a new directory to store preferences
+mkdir /etc/raspberrymem.prefs
+#create reminders and notes files for future use. If they already exist, the access times will be updated but the files will remain intact.
+mkdir /etc/raspberrymem.prefs/recurring-reminders
+touch /etc/raspberrymem.prefs/notes
+touch /etc/raspberrymem.prefs/welfare_checking
+
+if [ $lang = 1 ]
+then
+#english setup
+#generate locales
+locale-gen --purge en_US.UTF-8
+export LANG=en_US
+msgfmt -o /usr/share/locale/en_US/LC_MESSAGES/raspberrymem.mo en_US.po
+echo "You will be prompted in English from now on."
+exit 0
+fi
+if [ $lang = 2 ]
+then
+#Spanish setup
+#generate locales
+locale-gen --purge es_MX.UTF-8
+export LANG=es_MX
+#print WIP message
+echo "La traducción al español es un trabajo en progreso. Por lo tanto, puede contener algunos mensajes en inglés. Gracias por su comprensión."
+msgfmt -o /etc/raspberrymem.prefs/raspberrymem.mo es_MX.po
+echo "Ahora se le pedirá en español"
+exit 0
+fi
+#we've reached this point, so an invalid language number was entered.
+exec ./langselect

@@ -1,0 +1,19 @@
+
+#Copyright 2013 - Bill Dengler
+#raspberrymem is free software: you can redistribute it and/or modify
+#it under the terms of the GNU General Public License as published by
+#the Free Software Foundation, either version 3 of the License, or
+#(at your option) any later version.
+#raspberrymem is distributed in the hope that it will be useful,
+#but WITHOUT ANY WARRANTY; without even the implied warranty of
+#MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#GNU General Public License for more details.
+#You should have received a copy of the GNU General Public License
+#along with raspberrymem.  If not, see http://www.gnu.org/licenses
+gettext -s knt1
+read continue
+dialog --msgbox "$(gettext -s knt2)" 50 50
+dialog --no-cancel --menu "$(gettext -s knt3)" 50 50 2 1 "$(gettext -s knt31)" 2 "$(gettext -s knt32)"
+dialog --no-cancel --menu "$(gettext -s knt4)" 50 50 2 1 "$(gettext -s knt41)" 2 "$(gettext -s knt42)"
+./calendar "$(gettext -s knt5)"
+dialog --no-cancel --stdout --timebox "$(gettext -s knt6)" 0 0

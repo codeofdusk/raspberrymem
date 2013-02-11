@@ -1,0 +1,37 @@
+#Copyright 2013 - Bill Dengler
+#raspberrymem is free software: you can redistribute it and/or modify
+#it under the terms of the GNU General Public License as published by
+#the Free Software Foundation, either version 3 of the License, or
+#(at your option) any later version.
+#raspberrymem is distributed in the hope that it will be useful,
+#but WITHOUT ANY WARRANTY; without even the implied warranty of
+#MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#GNU General Public License for more details.
+#You should have received a copy of the GNU General Public License
+#along with raspberrymem.  If not, see http://www.gnu.org/licenses
+DEVOPT=$(dialog --stdout --menu "choose a developer option - warning - this is for developers and beta testers ONLY" 50 50 1 1 "check out a different branch")
+if [ "$DEVOPT" == "1" ]
+then
+BRANCHSEL=$(dialog --stdout --menu "select branch" 30 30 5 1 "master - stable release - recommended" 2 "alpha - latest alpha EXPERIMENTAL" 3 "beta - current beta EXPERIMENTAL" 4 "rc - current Rc - EXPERIMENTAL" 5 "latest - latest release(PROCEED AT YOUR OWN RISK)")
+if [ "$BRANCHSEL" == "1" ]
+then
+git checkout master
+fi
+if [ "$BRANCHSEL" == "2" ]
+then
+git checkout alpha
+fi
+if [ "$BRANCHSEL" == "3" ]
+then
+git checkout beta
+fi
+if [ "$BRANCHSEL" == "4" ]
+then
+git checkout rc
+fi
+if [ "$BRANCHSEL" == "5" ]
+then
+git checkout latest
+fi
+fi
+

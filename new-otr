@@ -1,0 +1,22 @@
+#Copyright 2013 - Bill Dengler
+#raspberrymem is free software: you can redistribute it and/or modify
+#it under the terms of the GNU General Public License as published by
+#the Free Software Foundation, either version 3 of the License, or
+#(at your option) any later version.
+#raspberrymem is distributed in the hope that it will be useful,
+#but WITHOUT ANY WARRANTY; without even the implied warranty of
+#MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#GNU General Public License for more details.
+#You should have received a copy of the GNU General Public License
+#along with raspberrymem.  If not, see http://www.gnu.org/licenses
+D=$(./calendar "$(gettext -s rdate)")
+TIME=$(dialog --no-cancel --time-format %H:%M --stdout --timebox "$(gettext -s rtime)" 0 0)
+msg=$(dialog --no-cancel --stdout --inputbox "$(gettext -s rmsg)" 50 50)
+if [ "${MSG}" == "" ]
+then
+MSG="alarm"
+fi
+#make a temp file for at's run command, will make less hacky later.
+echo "./do-alarm \"${msg}\"" > /tmp/at-cmd
+at -f /tmp/at-cmd ${TIME} ${D}
+rm /tmp/at-cmd

@@ -1,0 +1,26 @@
+#Copyright 2013 - Bill Dengler
+#raspberrymem is free software: you can redistribute it and/or modify
+#it under the terms of the GNU General Public License as published by
+#the Free Software Foundation, either version 3 of the License, or
+#(at your option) any later version.
+#raspberrymem is distributed in the hope that it will be useful,
+#but WITHOUT ANY WARRANTY; without even the implied warranty of
+#MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#GNU General Public License for more details.
+#You should have received a copy of the GNU General Public License
+#along with raspberrymem.  If not, see http://www.gnu.org/licenses
+SEL=$(dialog --stdout  --title "notification presentation options" --menu "select a setting to change it's value" 50 50 1 1 "notification sound options" )
+if [ "${SEL}" == "1" ]
+then
+ACM=$(dialog --stdout --title "notification sound options" --menu "select a setting to change it's value" 50 50 1 1 "enable/disable notification sound")
+if [ "${ACM}" == "1" ]
+then
+ACYN=$(dialog --stdout --menu "would you like a notification sound for alerts?" 50 50 2 "y" "yes" "n" "no")
+if [ ${ACYN} == "y" ]
+then
+touch /etc/raspberrymem.prefs/notification-sound-enabled
+else
+rm /etc/raspberrymem.prefs/notification-sound-enabled
+fi
+fi
+fi

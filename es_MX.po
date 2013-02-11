@@ -1,0 +1,235 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Raspberrymem\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Humberto Ruiz(A.K.A. The Honest Thief) <hber2.0@gmail.com>\n"
+"Language-Team: team 2065 <raspberrymem@googlegroups.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"Language: es-MX\n"
+
+msgid "depcheck"
+msgstr "Performando checke de dependencia. por favor espera."
+
+msgid "welcome"
+msgstr ""
+"Bienvenidos a Raspberrymem! Conque esta es la primera ves que eusas "
+"Raspberrymem, necesitas a responder a  unas preguntas. No teva tomar largo, "
+"te lo prometo!"
+
+msgid "fn"
+msgstr "Que es tu nombre primero?"
+
+msgid "ln"
+msgstr "Que es tu nombre familiar?"
+
+msgid "registermsg"
+msgstr ""
+"Raspberrymem esta attemptando a registrar te con el servedor. Por favor "
+"espera."
+
+msgid "registerfailedmsg"
+msgstr ""
+"registration fracasso. Usual mente quiede desir que el servedor no sirve al "
+"momento. Raspberrymem va attemptar a registrar otra ves en un momento."
+
+msgid "next"
+msgstr "sigiente"
+
+msgid "back"
+msgstr "atras"
+
+msgid "monthprompt"
+msgstr "Pon el numbero de la mes, por ejemplo 01 de Enero"
+
+msgid "dayprompt"
+msgstr "Pon el numbero de la dia, por ejemplo 05."
+
+msgid "yearprompt"
+msgstr "Pon el numbero del año, por ejemplo 1982"
+
+msgid "knt1"
+msgstr ""
+"Bienvenidos a Raspberrymem! Usa tu teclado para navegar el interface de "
+"usuario de Raspberrymem. Esta es una tutorial corta que te va a enseñiar te "
+"como usar tu teclado a navegar y familiar te con los controles de "
+"Raspberrymem. Para empezar, pressiona la lliave de enter en tu teclado."
+
+msgid "knt2"
+msgstr ""
+"Casi todo las pantyas de Raspberrymem tiene buttones de sigiente y atras. El "
+"button sigiente va mover una pantaya por enfrente, o submitir information tu "
+"has puesto or una selection tu hisiste de un menu. El button atras, when "
+"available, va mover te deregesso al la pantaya previous. Para pressionar el "
+"button sigiente, pressiona el enter key en tu teclado. Para pressionar el "
+"button atras, pressiona el ESC key en tu teclado. Pressiona el buttpn "
+"sigente ahora para contininuar."
+
+msgid "reminders"
+msgstr "schedule a reminder"
+
+msgid "timer"
+msgstr "set the countdown timer"
+
+msgid "notes"
+msgstr "write yourself a note"
+
+msgid "settings"
+msgstr "change Raspberrymem settings"
+
+msgid "games"
+msgstr "juego"
+
+msgid "notifications"
+msgstr "read your notifications"
+
+msgid "knt3"
+msgstr ""
+"choose an option with the arrow keys, and then press next to continue. it "
+"doesn't matter what option you pick, this is just a tutorial."
+
+msgid "knt31"
+msgstr "the first example option"
+
+msgid "knt32"
+msgstr "the second example option"
+
+msgid "knt4"
+msgstr ""
+"choose multiple options - use the arrow keys to move to an option, and then "
+"press the space bar to toggle it's selection, When your done, press next to "
+"continue."
+
+msgid "knt41"
+msgstr "an example option"
+
+msgid "knt42"
+msgstr "another example option"
+
+msgid "knt5"
+msgstr "enter a date by following the prompts."
+
+msgid "knt6"
+msgstr ""
+"choose a time with the timebox. Remember, the left and right arrows move "
+"between values, up and down arrows change values. Then press next to finish "
+"the tutorial."
+
+msgid "otr"
+msgstr "one time reminder - goes off only once"
+
+msgid "rr"
+msgstr "recurring reminder - goes off weekly on days you specify"
+
+msgid "remindertypemsg"
+msgstr ""
+"choose the type of reminder you wish to create, then press next to continue."
+
+msgid "seconds"
+msgstr "seconds"
+
+msgid "minutes"
+msgstr "minutes"
+
+msgid "hours"
+msgstr "hours"
+
+msgid "days"
+msgstr "days"
+
+msgid "unitprompt"
+msgstr "select the unit of time"
+
+msgid "tnumprompt"
+msgstr "how many units?"
+
+msgid "rdate"
+msgstr "entering  the reminder date"
+
+msgid "rtime"
+msgstr ""
+"enter the reminder time. Use the up and down arrow keys to change values, "
+"and the left and right arrows to move between values. When done, press next."
+
+msgid "rmsg"
+msgstr ""
+"enter the reminder message and then press next to finish setting your "
+"reminder."
+
+msgid "rtitle"
+msgstr "give your reminder a name. For example, pills"
+
+msgid "rdaysprompt"
+msgstr ""
+"select the days of the week that this reminder should go off on. Use the up "
+"and down arrows to move between days, and space bar to toggle their "
+"selection. Then press next to continue"
+
+msgid "sunday"
+msgstr "domingo"
+
+msgid "monday"
+msgstr "lunes"
+
+msgid "tuesday"
+msgstr "martes"
+
+msgid "wednesday"
+msgstr "miercoles"
+
+msgid "thursday"
+msgstr "jueves"
+
+msgid "friday"
+msgstr "vienes"
+
+msgid "saturday"
+msgstr "sabado"
+
+msgid "slocale"
+msgstr "locale settings"
+
+msgid "sreboot"
+msgstr "reboot device"
+
+msgid "srestore"
+msgstr "restore to factory defaults"
+
+msgid "stimezone"
+msgstr "set timezone"
+
+msgid "snp"
+msgstr "notification presentation"
+
+msgid "sa11y"
+msgstr "accessibility"
+
+msgid "sadvopts"
+msgstr "advanced"
+
+msgid "sremote"
+msgstr "remote access"
+
+msgid "slicense"
+msgstr "view license"
+
+msgid "slang"
+msgstr "change language"
+
+msgid "slocaleprompt"
+msgstr "select a locale setting to change"
+
+msgid "sprompt"
+msgstr "select a setting to change"
+
+msgid "sabout"
+msgstr "about this device"
+
+msgid "sdevopts"
+msgstr "developer options"
+
+msgid "scredits"
+msgstr "credits"

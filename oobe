@@ -1,0 +1,37 @@
+#Copyright 2013 - Bill Dengler
+#raspberrymem is free software: you can redistribute it and/or modify
+#it under the terms of the GNU General Public License as published by
+#the Free Software Foundation, either version 3 of the License, or
+#(at your option) any later version.
+#raspberrymem is distributed in the hope that it will be useful,
+#but WITHOUT ANY WARRANTY; without even the implied warranty of
+#MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#GNU General Public License for more details.
+#You should have received a copy of the GNU General Public License
+#along with raspberrymem.  If not, see http://www.gnu.org/licenses
+#delete any pre-existing config file
+rm -rf  /etc/raspberrymem.prefs
+echo "loading...................................."
+apt-get -qqqq update
+apt-get -qqqq install gettext
+./langselect
+#do a dependancy check
+gettext -s "depcheck"
+apt-get --force-yes -qqqq -y install espeak espeakup
+apt-get --force-yes -y -qqqq install bash sox  alsa-base alsa-utils dialog
+#run keyboard navigation tutorial
+./knt
+play -qq oobe.ogg &> /dev/null &
+dialog --msgbox "$(gettext -s welcome)" 100 100
+#prompt for tz selection
+./tzsel
+#fill in my server for server host and register.
+echo "billkd.deaddogcafe.ch" > /etc/raspberrymem.prefs/server_host
+./register
+#get the user's name
+export FN=$(dialog --no-cancel --stdout --inputbox "$(gettext -s fn)" 40 40 ) 
+export LN=$(dialog --no-cancel --stdout  --inputbox "$(gettext -s ln)" 40 40)
+echo "${FN}" > /etc/raspberrymem.prefs/fn
+echo "${LN}" > /etc/raspberrymem.prefs/ln
+touch /etc/raspberrymem.prefs/notification-sound-enabled
+killall play &> /dev/null

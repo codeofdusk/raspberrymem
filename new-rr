@@ -1,0 +1,26 @@
+#Copyright 2013 - Bill Dengler
+#raspberrymem is free software: you can redistribute it and/or modify
+#it under the terms of the GNU General Public License as published by
+#the Free Software Foundation, either version 3 of the License, or
+#(at your option) any later version.
+#raspberrymem is distributed in the hope that it will be useful,
+#but WITHOUT ANY WARRANTY; without even the implied warranty of
+#MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#GNU General Public License for more details.
+#You should have received a copy of the GNU General Public License
+#along with raspberrymem.  If not, see http://www.gnu.org/licenses
+#get the details
+TITLE=$(dialog --no-cancel --stdout --inputbox "$(gettext -s rtitle)" 50 50)
+DAYS=$(dialog --no-cancel --stdout --title "new recurring reminder" --checklist "$(gettext -s rdaysprompt)" 50 50 7 0 "$(gettext -s sunday)" off 1 "$(gettext -s monday)" off 2 "$(gettext -s tuesday)" off 3 "$(gettext -s wednesday)" off 4 "$(gettext -s thursday)" off 5 "$(gettext -s friday)" off 6 "$(gettext -s saturday)" off)
+#replace spaces with commas for cron
+DAYS=$(echo "$DAYS" | sed 's/[:space:]+/,/g')
+#remove quotes
+DAYS=$(echo "$DAYS" | sed 's/"//g')
+TIME=$(dialog --no-cancel --stdout --timebox "$(gettext -s rtime)" 0 0 0 0)
+#extract hour and minute
+H=$(date --date $TIME +%H)
+M=$(date --date $TIME +%M)
+MSG=$(dialog --stdout --inputbox "$(gettext -s rmsg)" 60 60)
+#and finally, we generate a new cron job
+echo "$M $H * * $DAYS $raspberrymem_location/do-alarm \"$MSG\"" > /etc/raspberrymem.prefs/recurring-reminders/$TITLE
+crontab /etc/raspberrymem.prefs/recurring-reminders/$TITLE

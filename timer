@@ -1,0 +1,33 @@
+
+#Copyright 2013 - Bill Dengler
+#raspberrymem is free software: you can redistribute it and/or modify
+#it under the terms of the GNU General Public License as published by
+#the Free Software Foundation, either version 3 of the License, or
+#(at your option) any later version.
+#raspberrymem is distributed in the hope that it will be useful,
+#but WITHOUT ANY WARRANTY; without even the implied warranty of
+#MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#GNU General Public License for more details.
+#You should have received a copy of the GNU General Public License
+#along with raspberrymem.  If not, see http://www.gnu.org/licenses
+UNIT=$(dialog --no-cancel --stdout --menu "$(gettext -s unitprompt)" 50 50 4 1 "$(gettext -s seconds)" 2 "$(gettext -s minutes)" 3 "$(gettext -s hours)" 4 "$(gettext -s days)")
+NUM=$(dialog --no-cancel --stdout  --inputbox "$(gettext -s tnumprompt)" 35 35)
+#calculate the wait variable based on the numbers of seconds.
+if [ "$UNIT" == "1" ]
+then
+WAIT=$[1*NUM]
+fi
+if [ "$UNIT" == "2" ]
+then
+WAIT=$[60*NUM]
+fi
+if [ "$UNIT" == "3" ]
+then
+WAIT=$[3600*NUM]
+fi
+if [ "$UNIT" == "4" ]
+then
+WAIT=$[86400*NUM]
+fi
+#call the backend, run it in the background so the device can continue to operate while the timer counts down.
+./delayed-alarm ${WAIT} "your timer is up." &

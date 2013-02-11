@@ -1,0 +1,28 @@
+#Copyright 2013 - Bill Dengler
+#raspberrymem is free software: you can redistribute it and/or modify
+#it under the terms of the GNU General Public License as published by
+#the Free Software Foundation, either version 3 of the License, or
+#(at your option) any later version.
+#raspberrymem is distributed in the hope that it will be useful,
+#but WITHOUT ANY WARRANTY; without even the implied warranty of
+#MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#GNU General Public License for more details.
+#You should have received a copy of the GNU General Public License
+#along with raspberrymem.  If not, see http://www.gnu.org/licenses
+SPEAKUPMODE=$(dialog --stdout --menu "Espeakup mode allows people who cannot see the screen to use raspberrymem. When this feature is enabled, raspberrymem will read out all menus and dialog boxes. This has nothing to do with Raspberrymem's talking reminders feature. Would you like to use this feature?" 80 80 1 1 "yes, enable espeakup mode" 2 "no, disable speakup mode")
+if [ "${SPEAKUPMODE}" == "1" ]
+then
+killall flite
+touch ~/.espeakupmode
+modprobe speakup_soft
+espeakup
+export DIALOGOPTS=--visit-items
+sleep .5
+echo "enabled"
+else
+killall flite &> /dev/null
+killall espeakup &> /dev/null
+modprobe -r speakup_soft
+rm ~/.espeakupmode &> /dev/null
+echo "disabled"
+fi

@@ -1,0 +1,31 @@
+#Copyright 2013 - Bill Dengler
+#raspberrymem is free software: you can redistribute it and/or modify
+#it under the terms of the GNU General Public License as published by
+#the Free Software Foundation, either version 3 of the License, or
+#(at your option) any later version.
+#raspberrymem is distributed in the hope that it will be useful,
+#but WITHOUT ANY WARRANTY; without even the implied warranty of
+#MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#GNU General Public License for more details.
+#You should have received a copy of the GNU General Public License
+#along with raspberrymem.  If not, see http://www.gnu.org/licenses
+if [ ! -f /etc/raspberrymem.prefs/alarming ]
+then
+echo "no notifications"
+exit
+fi
+while read N;
+do
+NCOUNT=$(($NCOUNT+1))
+NOPT=$(dialog --stdout --menu "notification $NCOUNT :$N" 50 50 1 "o" "OK")
+if [ "$NOPT" == "d" ]
+then
+sed -i "/$N/d" /etc/raspberrymem.prefs/alarming > /etc/raspberrymem.prefs/alarming
+fi
+done < /etc/raspberrymem.prefs/alarming
+#a hacky I know but still a fix for a bug that caused notifications to never dismiss. If we ever have a function that handles a notification without moving it out of the alarming file we'll uncomment the below if and fi lines
+#if [ ! -s /etc/raspberrymem.prefs/alarming ]
+#then
+rm /etc/raspberrymem.prefs/alarming
+#fi
+#restart talk2server and cancel any welfare checks.

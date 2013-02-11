@@ -1,0 +1,23 @@
+#Copyright 2013 - Bill Dengler
+#raspberrymem is free software: you can redistribute it and/or modify
+#it under the terms of the GNU General Public License as published by
+#the Free Software Foundation, either version 3 of the License, or
+#(at your option) any later version.
+#raspberrymem is distributed in the hope that it will be useful,
+#but WITHOUT ANY WARRANTY; without even the implied warranty of
+#MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#GNU General Public License for more details.
+#You should have received a copy of the GNU General Public License
+#along with raspberrymem.  If not, see http://www.gnu.org/licenses
+#declare variables
+export SERVER_HOST=$(cat /etc/raspberrymem.prefs/server_host)
+#and we're off!
+echo "put" > /tmp/stuff2send
+cat /etc/raspberrymem.prefs/deviceid >> /tmp/stuff2send
+echo "notes" >> /tmp/stuff2send
+cat /etc/raspberrymem.prefs/notes >> /tmp/stuff2send
+echo "." >> /tmp/stuff2send
+#send it off over netcat
+cat /tmp/stuff2send | nc $SERVER_HOST 7777
+#clean up
+rm /tmp/stuff2send &> /dev/null

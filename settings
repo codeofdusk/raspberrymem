@@ -1,0 +1,64 @@
+#Copyright 2013 - Bill Dengler
+#raspberrymem is free software: you can redistribute it and/or modify
+#it under the terms of the GNU General Public License as published by
+#the Free Software Foundation, either version 3 of the License, or
+#(at your option) any later version.
+#raspberrymem is distributed in the hope that it will be useful,
+#but WITHOUT ANY WARRANTY; without even the implied warranty of
+#MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#GNU General Public License for more details.
+#You should have received a copy of the GNU General Public License
+#along with raspberrymem.  If not, see http://www.gnu.org/licenses
+SEL=$(dialog --stdout  --menu "$(gettext -s sprompt)" 50 50 11 1 "$(gettext -s slocale)" 2 "$(gettext -s sreboot)" 3 "$(gettext -s srestore)" 4 "$(gettext -s slicense)" 5 "$(gettext -s sa11y)" 6 "$(gettext -s sadvopts)" 7 "$(gettext -s sremote)" 8 "$(gettext -s snp)" 9 "$(gettext -s sabout)" 10 "$(gettext -s sdevopts)" 11 "$(gettext -s scredits)")
+if [ "$SEL" == "3" ]
+then
+./oobe
+fi
+if [ "$SEL" == "2" ]
+then
+#uncomment if real device
+reboot
+fi
+if [ "$SEL" == "1" ]
+then
+./locale-settings
+fi
+if [ "${SEL}" == "4" ]
+then
+dialog --textbox license 500 500
+fi
+if [ "${SEL}" == "5" ]
+then
+./a11y
+fi
+if [ "${SEL}" == "6" ]
+then
+./advanced-opts
+fi
+if [ "${SEL}" == "7" ]
+then
+./remote-prefs
+fi
+if [ "$SEL" == "8" ]
+then
+./notification-presentation
+fi
+if [ "$SEL" == "9" ]
+then
+
+#get device ID
+DEVICEID=$(cat /etc/raspberrymem.prefs/deviceid)
+echo "device ID : $DEVICEID" > /tmp/about-raspberrymem
+#display the info to the user
+dialog --textbox /tmp/about-raspberrymem 600 600
+fi
+if [ "$SEL" == "10" ]
+then
+./devopts
+fi
+if [ "$SEL" == "11" ]
+then
+more credits
+echo "press enter to continue"
+read continue
+fi
