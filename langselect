@@ -27,6 +27,8 @@ then
 #generate locales
 locale-gen --purge en_US.UTF-8
 export LANG=en_US
+#make directory tree
+mkdir -p /usr/share/locale/en_US/LC_MESSAGES &> /dev/null
 msgfmt -o /usr/share/locale/en_US/LC_MESSAGES/raspberrymem.mo en_US.po
 echo "You will be prompted in English from now on."
 exit 0
@@ -39,6 +41,8 @@ locale-gen --purge es_MX.UTF-8
 export LANG=es_MX
 #print WIP message
 echo "La traducción al español es un trabajo en progreso. Por lo tanto, puede contener algunos mensajes en inglés. Gracias por su comprensión."
+#make directory tree
+mkdir -p /usr/share/locale/en_US/LC_MESSAGES &> /dev/null
 msgfmt -o /etc/raspberrymem.prefs/raspberrymem.mo es_MX.po
 echo "Ahora se le pedirá en español"
 exit 0
