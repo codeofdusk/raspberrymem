@@ -200,16 +200,16 @@ msgstr "developer options"
 msgid "scredits"
 msgstr "credits"
 
-#, fuzzy
 msgid "snoa11y"
-msgstr "accessibility"
+msgstr "Unfortunately, accessibility support is not available in this version."
 
 msgid "shost"
 msgstr "set server hostname/IP address"
 
-#, fuzzy
+
 msgid "shostprompt"
-msgstr "select a setting to change"
+msgstr "Enter the hostname or IP address of the server to register with."
+
 
 msgid "deviceid"
 msgstr "device ID"
