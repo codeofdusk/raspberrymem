@@ -19,7 +19,7 @@ mkdir /etc/raspberrymem.prefs
 #create reminders and notes files for future use. If they already exist, the access times will be updated but the files will remain intact.
 mkdir /etc/raspberrymem.prefs/recurring-reminders
 touch /etc/raspberrymem.prefs/notes
-touch /etc/raspberrymem.prefs/welfare_checking
+
 
 if [ $lang = 1 ]
 then
@@ -42,8 +42,8 @@ export LANG=es_MX
 #print WIP message
 echo "La traducción al español es un trabajo en progreso. Por lo tanto, puede contener algunos mensajes en inglés. Gracias por su comprensión."
 #make directory tree
-mkdir -p /usr/share/locale/en_US/LC_MESSAGES &> /dev/null
-msgfmt -o /etc/raspberrymem.prefs/raspberrymem.mo es_MX.po
+mkdir -p /usr/share/locale/es_MX/LC_MESSAGES &> /dev/null
+msgfmt -o /usr/share/locale/es_MX/LC_MESSAGES/raspberrymem.mo es_MX.po
 echo "Ahora se le pedirá en español"
 exit 0
 fi
