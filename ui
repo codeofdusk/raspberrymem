@@ -25,9 +25,9 @@ fi
 ./notificationd &
 while :
 do
-#pull latest code from git
+#merge latest code from bzr
 echo "please wait"
-git pull &> /dev/null
+bzr merge &> /dev/null
 if [ ! -d /etc/raspberrymem.prefs ]
 then
 exec ./oobe
