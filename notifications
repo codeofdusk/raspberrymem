@@ -17,7 +17,7 @@ fi
 while read N;
 do
 NCOUNT=$(($NCOUNT+1))
-NOPT=$(dialog --stdout --menu "notification $NCOUNT :$N" 50 50 1 "o" "OK")
+NOPT=$(dialog --stdout --menu "notification $NCOUNT :$N" 50 50 1 "d" "$(gettext -s dismiss)")
 if [ "$NOPT" == "d" ]
 then
 sed -i "/$N/d" /etc/raspberrymem.prefs/alarming > /etc/raspberrymem.prefs/alarming
@@ -28,4 +28,3 @@ done < /etc/raspberrymem.prefs/alarming
 #then
 rm /etc/raspberrymem.prefs/alarming
 #fi
-#restart talk2server and cancel any welfare checks.
