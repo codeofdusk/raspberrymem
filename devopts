@@ -12,26 +12,14 @@
 DEVOPT=$(dialog --stdout --menu "choose a developer option - warning - this is for developers and beta testers ONLY" 50 50 1 1 "check out a different branch")
 if [ "$DEVOPT" == "1" ]
 then
-BRANCHSEL=$(dialog --stdout --menu "select branch" 30 30 5 1 "master - stable release - recommended" 2 "alpha - latest alpha EXPERIMENTAL" 3 "beta - current beta EXPERIMENTAL" 4 "rc - current Rc - EXPERIMENTAL" 5 "latest - latest release(PROCEED AT YOUR OWN RISK)")
+BRANCHSEL=$(dialog --stdout --menu "$(gettext -s branchselprompt)" 50 50 2 1 "$(gettext -s release)" 2 "$(gettext -s trunk)" )
 if [ "$BRANCHSEL" == "1" ]
 then
-git checkout master
+bzr switch -b release
 fi
 if [ "$BRANCHSEL" == "2" ]
 then
-git checkout alpha
-fi
-if [ "$BRANCHSEL" == "3" ]
-then
-git checkout beta
-fi
-if [ "$BRANCHSEL" == "4" ]
-then
-git checkout rc
-fi
-if [ "$BRANCHSEL" == "5" ]
-then
-git checkout latest
+bzr switch -b trunk
 fi
 fi
 

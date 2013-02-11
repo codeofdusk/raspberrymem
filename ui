@@ -19,7 +19,7 @@ UITEXT="client version $version you are at the main menu. Use the arrow keys to 
 #initial oobe check
 if [ ! -d /etc/raspberrymem.prefs ]
 then
-./oobe
+./oobe $1
 fi
 #start the notification daemon
 ./notificationd &

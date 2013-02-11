@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Raspberrymem\n"
 "POT-Creation-Date: \n"
 "PO-Revision-Date: \n"
-"Last-Translator: Bill Dengler(A.K.A. Billkd) <billkd314159@gmail.com>\n"
+"Last-Translator: Humberto Ruiz(A.K.A. The Honest Thief) <hber2.0@gmail.com>\n"
 "Language-Team: team 2065 <raspberrymem@googlegroups.com>\n"
 "Language: es-MX\n"
 "MIME-Version: 1.0\n"
@@ -48,7 +48,7 @@ msgid "knt1"
 msgstr "Bienvenidos a Raspberrymem! Usa tu teclado para navegar el interface de usuario de Raspberrymem. Esta es una tutorial corta que te va a enseñiar te como usar tu teclado a navegar y familiar te con los controles de Raspberrymem. Para empezar, pressiona la lliave de enter en tu teclado."
 
 msgid "knt2"
-msgstr "Casi todo las pantyas de Raspberrymem tiene buttones de sigiente y atras. El button sigiente va mover una pantaya por enfrente, o submitir information tu has puesto or una selection tu hisiste de un menu. El button atras, when available, va mover te deregesso al la pantaya previous. Para pressionar el button sigiente, pressiona el enter key en tu teclado. Para pressionar el button atras, pressiona el ESC key en tu teclado. Pressiona el buttpn sigente ahora para contininuar."
+msgstr "Casi todo las pantyas de Raspberrymem tiene buttones de sigiente y atras. El button sigiente va mover una pantaya por enfrente, o submitir information tu has puesto or una selection tu hisiste de un menu. El button atras, when available, va mover te deregesso al la pantaya previous. Para pressionar el button sigiente, pressiona el tecla enter en tu teclado. Para pressionar el button atras, pressiona el tecla ESC en tu teclado. Pressiona el buttpn sigente ahora para contininuar."
 
 msgid "reminders"
 msgstr "schedule a reminder"
@@ -57,34 +57,34 @@ msgid "timer"
 msgstr "set the countdown timer"
 
 msgid "notes"
-msgstr "write yourself a note"
+msgstr "escriba una nota para tu"
 
 msgid "settings"
-msgstr "change Raspberrymem settings"
+msgstr "camia Raspberrymem settings"
 
 msgid "games"
-msgstr "juego"
+msgstr "juegos"
 
 msgid "notifications"
-msgstr "read your notifications"
+msgstr "lea la livro"
 
 msgid "knt3"
-msgstr "choose an option with the arrow keys, and then press next to continue. it doesn't matter what option you pick, this is just a tutorial."
+msgstr "esqoje un option de los arrow keys, y luego pressiona siguiente para continuar. No importa que opcion esqujes, este solamente es una tutorial."
 
 msgid "knt31"
-msgstr "the first example option"
+msgstr "opcion de ejemplo primera"
 
 msgid "knt32"
-msgstr "the second example option"
+msgstr "opcion del ejemplo segunda "
 
 msgid "knt4"
-msgstr "choose multiple options - use the arrow keys to move to an option, and then press the space bar to toggle it's selection, When your done, press next to continue."
+msgstr "esqoje multiplo opciones - usa los arrow keys para mover a un opcion, y luego pressiona la bara largo para togglar su selection. Quando terminaste, pressiona sigiente para continuar."
 
 msgid "knt41"
-msgstr "an example option"
+msgstr "un opcion de ejemplo"
 
 msgid "knt42"
-msgstr "another example option"
+msgstr "otro opcion de ejemplo"
 
 msgid "knt5"
 msgstr "enter a date by following the prompts."
@@ -99,25 +99,25 @@ msgid "rr"
 msgstr "recurring reminder - goes off weekly on days you specify"
 
 msgid "remindertypemsg"
-msgstr "choose the type of reminder you wish to create, then press next to continue."
+msgstr "choose the type of reminder you wish to create, luego pressiona sigiuente para continuar."
 
 msgid "seconds"
-msgstr "seconds"
+msgstr "segundos"
 
 msgid "minutes"
-msgstr "minutes"
+msgstr "minutos"
 
 msgid "hours"
-msgstr "hours"
+msgstr "horas "
 
 msgid "days"
-msgstr "days"
+msgstr "dias"
 
 msgid "unitprompt"
-msgstr "select the unit of time"
+msgstr "selecionas el unito de tiempo"
 
 msgid "tnumprompt"
-msgstr "how many units?"
+msgstr "quantos unitos?"
 
 msgid "rdate"
 msgstr "entering  the reminder date"
@@ -168,22 +168,22 @@ msgid "stimezone"
 msgstr "set timezone"
 
 msgid "snp"
-msgstr "notification presentation"
+msgstr "notificacion presentacion"
 
 msgid "sa11y"
-msgstr "accessibility"
+msgstr "accessibilitad"
 
 msgid "sadvopts"
-msgstr "advanced"
+msgstr "advancado"
 
 msgid "sremote"
-msgstr "remote access"
+msgstr "accesso remota"
 
 msgid "slicense"
-msgstr "view license"
+msgstr "mirar licensia "
 
 msgid "slang"
-msgstr "change language"
+msgstr "cambiar lenguaje"
 
 msgid "slocaleprompt"
 msgstr "select a locale setting to change"
@@ -198,7 +198,7 @@ msgid "sdevopts"
 msgstr "developer options"
 
 msgid "scredits"
-msgstr "credits"
+msgstr "creditos"
 
 msgid "snoa11y"
 msgstr "Unfortunately, accessibility support is not available in this version."
@@ -206,23 +206,24 @@ msgstr "Unfortunately, accessibility support is not available in this version."
 msgid "shost"
 msgstr "set server hostname/IP address"
 
-
 msgid "shostprompt"
 msgstr "Enter the hostname or IP address of the server to register with."
 
-
 msgid "deviceid"
-msgstr "device ID"
+msgstr "ID de la machina"
 
 msgid "tup"
 msgstr "Your timer is up."
 
 msgid "dismiss"
 msgstr "dismiss"
+
 msgid "branchselprompt"
 msgstr "select the bazaar branch to switch to : "
+
 msgid "release"
 msgstr "release - raspberrymem releases/milestones(recommended)"
+
 msgid "trunk"
 msgstr "trunk - trunk code from bazaar(experimental/not recommended)"
 
