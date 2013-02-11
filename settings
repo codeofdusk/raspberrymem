@@ -48,7 +48,7 @@ then
 
 #get device ID
 DEVICEID=$(cat /etc/raspberrymem.prefs/deviceid)
-echo "device ID : $DEVICEID" > /tmp/about-raspberrymem
+echo "$(gettext -s deviceid) : $DEVICEID" > /tmp/about-raspberrymem
 #display the info to the user
 dialog --textbox /tmp/about-raspberrymem 600 600
 fi
