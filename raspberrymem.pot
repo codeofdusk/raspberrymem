@@ -150,4 +150,4 @@ msgstr "device ID"
 msgid "tup"
 msgstr "Your timer is up."
 msgid "dismiss"
-msgstr "dismiss
+msgstr "dismiss"
