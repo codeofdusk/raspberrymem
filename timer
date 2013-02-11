@@ -30,4 +30,4 @@ then
 WAIT=$[86400*NUM]
 fi
 #call the backend, run it in the background so the device can continue to operate while the timer counts down.
-./delayed-alarm ${WAIT} "your timer is up." &
+./delayed-alarm ${WAIT} "$(gettext -s tup)" &
