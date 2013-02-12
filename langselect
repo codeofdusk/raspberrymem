@@ -19,7 +19,7 @@ mkdir /etc/raspberrymem.prefs
 #create reminders and notes files for future use. If they already exist, the access times will be updated but the files will remain intact.
 mkdir /etc/raspberrymem.prefs/recurring-reminders
 touch /etc/raspberrymem.prefs/notes
-touch /etc/raspberrymem.prefs/welfare_checking
+
 
 if [ $lang = 1 ]
 then
