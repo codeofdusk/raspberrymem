@@ -14,7 +14,7 @@ export TEXTDOMAIN="raspberrymem"
 #export current raspberrymem location to a variable for execution of cron jobs and other scripts
 export raspberrymem_location="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 #version number, edit for new releases
-export version="3.0 rc"
+export version="3.0 pre"
 UITEXT="client version $version you are at the main menu. Use the arrow keys to find an option, and then press enter to select it. Note that this is a menu, and so you can't just type into it."
 #initial oobe check
 if [ ! -d /etc/raspberrymem.prefs ]
