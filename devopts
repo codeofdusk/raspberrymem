@@ -19,7 +19,7 @@ then
 fi
 if [ "$BRANCHSEL" == "2" ]
 then
-./switchbranch "lp:raspberrymem/trunk"
+./switchbranch "lp:raspberrymem"
 fi
 fi
 
