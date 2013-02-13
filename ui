@@ -27,7 +27,7 @@ while :
 do
 #merge latest code from bzr
 echo "please wait"
-bzr merge &> /dev/null
+bzr update &> /dev/null
 if [ ! -d /etc/raspberrymem.prefs ]
 then
 exec ./oobe

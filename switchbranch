@@ -9,17 +9,11 @@
 #GNU General Public License for more details.
 #You should have received a copy of the GNU General Public License
 #along with raspberrymem.  If not, see http://www.gnu.org/licenses
-DEVOPT=$(dialog --stdout --menu "choose a developer option - warning - this is for developers and beta testers ONLY" 50 50 1 1 "check out a different branch")
-if [ "$DEVOPT" == "1" ]
-then
-BRANCHSEL=$(dialog --stdout --menu "$(gettext -s branchselprompt)" 50 50 2 1 "$(gettext -s release)" 2 "$(gettext -s trunk)" )
-if [ "$BRANCHSEL" == "1" ]
-then
-./switchbranch "lp:raspberrymem/release" 
-fi
-if [ "$BRANCHSEL" == "2" ]
-then
-./switchbranch "lp:raspberrymem/trunk"
-fi
-fi
-
+#write what we want to do to a shell script for better reliability
+echo "rm -rf $raspberrymem_location" > /tmp/switchbranch
+echo "bzr checkout $1 $raspberrymem_location" >> /tmp/switchbranch
+echo "cd $raspberrymem_location" >> /tmp/switchbranch
+echo "rm -rf /etc/raspberrymem.prefs" >> /tmp/switchbranch
+echo "exec ./ui" >> /tmp/switchbranch
+chmod +x /tmp/switchbranch
+exec /tmp/switchbranch
