@@ -3,103 +3,133 @@ msgstr ""
 "Project-Id-Version: Raspberrymem\n"
 "POT-Creation-Date: \n"
 "PO-Revision-Date: \n"
-"Last-Translator: Humberto Ruiz(A.K.A. The Honest Thief) <hber2.0@gmail.com>\n"
+"Last-Translator: Humberto I. Ruiz <hber2.0@gmail.com>\n"
 "Language-Team: team 2065 <raspberrymem@googlegroups.com>\n"
 "Language: es-MX\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.5.5\n"
 
 msgid "depcheck"
 msgstr "depcheck"
 
 msgid "welcome"
-msgstr "Bienvenidos a Raspberrymem! Conque esta es la primera ves que eusas Raspberrymem, necesitas a responder a  unas preguntas. No teva tomar largo, te lo prometo!"
+msgstr ""
+"Bienvenidos a Raspberrymem! Conque esta es la primera ves que eusas "
+"Raspberrymem, necesitas a responder a  unas preguntas. No teva tomar largo, "
+"te lo prometo!"
 
 msgid "fn"
-msgstr "Que es tu nombre primero?"
+msgstr "Que es tu nombre?"
 
 msgid "ln"
-msgstr "Que es tu nombre familiar?"
+msgstr "Que es tu apellido?"
 
 msgid "registermsg"
-msgstr "Raspberrymem esta attemptando a registrar te con el servedor. Por favor espera."
+msgstr ""
+"Raspberrymem esta intentando registrar te con el servidor. Por favor espera."
 
 msgid "registerfailedmsg"
-msgstr "registration fracasso. Usual mente quiede desir que el servedor no sirve al momento. Raspberrymem va attemptar a registrar otra ves en un momento."
+msgstr ""
+"registration fracasso. Usualmente quiere decir que el servidor no esta "
+"disponible  al momento. Raspberrymem va a intentar registrarte otra ves en "
+"un momento."
 
 msgid "next"
-msgstr "sigiente"
+msgstr "siguiente"
 
 msgid "back"
 msgstr "atras"
 
 msgid "monthprompt"
-msgstr "Pon el numbero de la mes, por ejemplo 01 de Enero"
+msgstr "Pon el numero mes, por ejemplo 01 de Enero"
 
 msgid "dayprompt"
-msgstr "Pon el numbero de la dia, por ejemplo 05."
+msgstr "Pon el numero del dia, por ejemplo 05."
 
 msgid "yearprompt"
-msgstr "Pon el numbero del año, por ejemplo 1982"
+msgstr "Pon el numero del año, por ejemplo 1982"
 
 msgid "knt1"
-msgstr "Bienvenidos a Raspberrymem! Usa tu teclado para navegar el interface de usuario de Raspberrymem. Esta es una tutorial corta que te va a enseñiar te como usar tu teclado a navegar y familiar te con los controles de Raspberrymem. Para empezar, pressiona la lliave de enter en tu teclado."
+msgstr ""
+"Bienvenidos a Raspberrymem! Usa tu teclado para navegar el interface de "
+"usuario de Raspberrymem. Esta es una tutoria corta que te va a enseñar  como "
+"usar tu teclado para navegar y familiarizarte con los controles de "
+"Raspberrymem. Para empezar, presiona la tecla enter."
 
 msgid "knt2"
-msgstr "Casi todo las pantyas de Raspberrymem tiene buttones de sigiente y atras. El button sigiente va mover una pantaya por enfrente, o submitir information tu has puesto or una selection tu hisiste de un menu. El button atras, when available, va mover te deregesso al la pantaya previous. Para pressionar el button sigiente, pressiona el tecla enter en tu teclado. Para pressionar el button atras, pressiona el tecla ESC en tu teclado. Pressiona el buttpn sigente ahora para contininuar."
+msgstr ""
+"Casi todo las pantallas de Raspberrymem tiene botones de siguiente y atras. "
+"El boton siguiente va a mover a la pantalla siguiente, o introducir "
+"informacion tu has puesto or una seleccion tu hiciste de un menu. El boton "
+"atras, cuando este disponible, va a moverte de regeso a la pantalla previa. "
+"Para presionar el boton siguiente, presiona el tecla enter en tu teclado. "
+"Para presionar el button atras, pressiona el tecla ESC en tu teclado.Ahora "
+"presiona el boton siguente para continuar."
 
 msgid "reminders"
 msgstr "schedule a reminder"
 
 msgid "timer"
-msgstr "set the countdown timer"
+msgstr "configura el temporizador de cuenta regresiva"
 
 msgid "notes"
-msgstr "escriba una nota para tu"
+msgstr "escribe tus propios recordatorios"
 
 msgid "settings"
-msgstr "camia Raspberrymem settings"
+msgstr "cambia la configuracion de Raspberrymem."
 
 msgid "games"
 msgstr "juegos"
 
 msgid "notifications"
-msgstr "lea la livro"
+msgstr "lee el libro"
 
 msgid "knt3"
-msgstr "esqoje un option de los arrow keys, y luego pressiona siguiente para continuar. No importa que opcion esqujes, este solamente es una tutorial."
+msgstr ""
+"escoge una opcion de teclas de flecha y luego presiona siguiente para "
+"continuar. No importa que opcion escogas, este solamente es un tutorial."
 
 msgid "knt31"
-msgstr "opcion de ejemplo primera"
+msgstr "primer opcion de ejemplo  "
 
 msgid "knt32"
-msgstr "opcion del ejemplo segunda "
+msgstr "segunda opcion de ejemplo  "
 
 msgid "knt4"
-msgstr "esqoje multiplo opciones - usa los arrow keys para mover a un opcion, y luego pressiona la bara largo para togglar su selection. Quando terminaste, pressiona sigiente para continuar."
+msgstr ""
+"escoge multiples opciones - usa las teclas de flecha para mover a un opcion, "
+"y luego presiona la barra espaciadora para alternar tu selection. Cuando "
+"terminas, presiona siguiente para continuar."
 
 msgid "knt41"
-msgstr "un opcion de ejemplo"
+msgstr "opcion de ejemplo"
 
 msgid "knt42"
-msgstr "otro opcion de ejemplo"
+msgstr "otra opcion de ejemplo"
 
 msgid "knt5"
-msgstr "enter a date by following the prompts."
+msgstr "entra una fecha siguiendo las instrucciones."
 
 msgid "knt6"
-msgstr "choose a time with the timebox. Remember, the left and right arrows move between values, up and down arrows change values. Then press next to finish the tutorial."
+msgstr ""
+"escoge una hora con el \"timebox\". Recuerda, las flechas de izquierda y "
+"derecha te mueven entre los valores, las flechas arriba y abajo cambian los "
+"valores. Despues presiona siguiente para terminar el tutorial"
 
 msgid "otr"
-msgstr "one time reminder - goes off only once"
+msgstr "recodatorio de una sola vez - sólo activa una vez"
 
 msgid "rr"
-msgstr "recurring reminder - goes off weekly on days you specify"
+msgstr ""
+"recordatorio recurrente - se activa semanalmente en los días que se "
+"especificen"
 
 msgid "remindertypemsg"
-msgstr "choose the type of reminder you wish to create, luego pressiona sigiuente para continuar."
+msgstr ""
+"escoge el tipo de recordatorio que desee crear, luego pressiona sigiuente "
+"para continuar."
 
 msgid "seconds"
 msgstr "segundos"
@@ -123,16 +153,23 @@ msgid "rdate"
 msgstr "entering  the reminder date"
 
 msgid "rtime"
-msgstr "enter the reminder time. Use the up and down arrow keys to change values, and the left and right arrows to move between values. When done, press next."
+msgstr ""
+"enter the reminder time. Use the up and down arrow keys to change values, "
+"and the left and right arrows to move between values. When done, press next."
 
 msgid "rmsg"
-msgstr "enter the reminder message and then press next to finish setting your reminder."
+msgstr ""
+"enter the reminder message and then press next to finish setting your "
+"reminder."
 
 msgid "rtitle"
 msgstr "give your reminder a name. For example, pills"
 
 msgid "rdaysprompt"
-msgstr "select the days of the week that this reminder should go off on. Use the up and down arrows to move between days, and space bar to toggle their selection. Then press next to continue"
+msgstr ""
+"select the days of the week that this reminder should go off on. Use the up "
+"and down arrows to move between days, and space bar to toggle their "
+"selection. Then press next to continue"
 
 msgid "sunday"
 msgstr "domingo"
@@ -226,4 +263,3 @@ msgstr "release - raspberrymem releases/milestones(recommended)"
 
 msgid "trunk"
 msgstr "trunk - trunk code from bazaar(experimental/not recommended)"
-
