@@ -10,10 +10,10 @@
 #You should have received a copy of the GNU General Public License
 #along with raspberrymem.  If not, see http://www.gnu.org/licenses
 #language selector, the only part of the program with hardcoded messages for obvious reasons.
-echo "for instructions in English, press 1 followed by the enter key."
+echo "for instructions in English, press 1."
 #I promise this will be the only Google Translated file
-echo "para instrucciones en español mexicano, pulse 2 seguido de la tecla Enter."
-read lang
+echo "Para obtener instrucciones en español mexicano, pulse 2."
+read -n 1 lang
 #generate a new directory to store preferences
 mkdir /etc/raspberrymem.prefs
 #create reminders and notes files for future use. If they already exist, the access times will be updated but the files will remain intact.

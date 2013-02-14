@@ -12,8 +12,7 @@ msgstr ""
 "X-Generator: Poedit 1.5.5\n"
 
 msgid "depcheck"
-msgstr "depcheck"
-
+msgstr ""
 msgid "welcome"
 msgstr ""
 "Bienvenidos a Raspberrymem! Conque esta es la primera ves que eusas "
@@ -69,8 +68,7 @@ msgstr ""
 "presiona el boton siguente para continuar."
 
 msgid "reminders"
-msgstr "schedule a reminder"
-
+msgstr ""
 msgid "timer"
 msgstr "configura el temporizador de cuenta regresiva"
 
@@ -150,27 +148,15 @@ msgid "tnumprompt"
 msgstr "quantos unitos?"
 
 msgid "rdate"
-msgstr "entering  the reminder date"
-
+msgstr ""
 msgid "rtime"
 msgstr ""
-"enter the reminder time. Use the up and down arrow keys to change values, "
-"and the left and right arrows to move between values. When done, press next."
-
 msgid "rmsg"
 msgstr ""
-"enter the reminder message and then press next to finish setting your "
-"reminder."
-
 msgid "rtitle"
-msgstr "give your reminder a name. For example, pills"
-
+msgstr ""
 msgid "rdaysprompt"
 msgstr ""
-"select the days of the week that this reminder should go off on. Use the up "
-"and down arrows to move between days, and space bar to toggle their "
-"selection. Then press next to continue"
-
 msgid "sunday"
 msgstr "domingo"
 
@@ -193,16 +179,16 @@ msgid "saturday"
 msgstr "sabado"
 
 msgid "slocale"
-msgstr "locale settings"
+msgstr ""
 
 msgid "sreboot"
-msgstr "reboot device"
+msgstr ""
 
 msgid "srestore"
-msgstr "restore to factory defaults"
+msgstr ""
 
 msgid "stimezone"
-msgstr "set timezone"
+msgstr ""
 
 msgid "snp"
 msgstr "notificacion presentacion"
@@ -223,43 +209,43 @@ msgid "slang"
 msgstr "cambiar lenguaje"
 
 msgid "slocaleprompt"
-msgstr "select a locale setting to change"
+msgstr ""
 
 msgid "sprompt"
-msgstr "select a setting to change"
+msgstr ""
 
 msgid "sabout"
-msgstr "about this device"
+msgstr ""
 
 msgid "sdevopts"
-msgstr "developer options"
+msgstr ""
 
 msgid "scredits"
 msgstr "creditos"
 
 msgid "snoa11y"
-msgstr "Unfortunately, accessibility support is not available in this version."
+msgstr ""
 
 msgid "shost"
-msgstr "set server hostname/IP address"
+msgstr ""
 
 msgid "shostprompt"
-msgstr "Enter the hostname or IP address of the server to register with."
+msgstr ""
 
 msgid "deviceid"
 msgstr "ID de la machina"
 
 msgid "tup"
-msgstr "Your timer is up."
+msgstr ""
 
 msgid "dismiss"
-msgstr "dismiss"
+msgstr ""
 
 msgid "branchselprompt"
-msgstr "select the bazaar branch to switch to : "
+msgstr ""
 
 msgid "release"
-msgstr "release - raspberrymem releases/milestones(recommended)"
+msgstr ""
 
 msgid "trunk"
-msgstr "trunk - trunk code from bazaar(experimental/not recommended)"
+msgstr ""
