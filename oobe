@@ -14,8 +14,14 @@ rm -rf  /etc/raspberrymem.prefs
 echo "loading...................................."
 if [ $1 != "--no-depcheck" ]
 then
+which apt-get &> /dev/null
+if [ $? == 0 ]
+then
 apt-get -qqqq update
+fi
 apt-get -qqqq install gettext
+
+
 fi
 ./langselect
 #do a dependancy check
