@@ -10,6 +10,13 @@
 #You should have received a copy of the GNU General Public License
 #along with raspberrymem.  If not, see http://www.gnu.org/licenses
 #language selector, the only part of the program with hardcoded messages for obvious reasons.
+#get gettext
+echo "loading...................................."
+if [ $1 != "--no-depcheck" ]
+then
+./installpkg gettext
+
+fi
 echo "for instructions in English, press 1."
 #I promise this will be the only Google Translated file
 echo "Para obtener instrucciones en español mexicano, pulse 2."

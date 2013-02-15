@@ -11,12 +11,6 @@
 #along with raspberrymem.  If not, see http://www.gnu.org/licenses
 #delete any pre-existing config file
 rm -rf  /etc/raspberrymem.prefs
-echo "loading...................................."
-if [ $1 != "--no-depcheck" ]
-then
-./installpkg gettext
-
-fi
 ./langselect
 #do a dependancy check
 gettext -s "depcheck"
