@@ -12,12 +12,13 @@ msgstr ""
 "X-Generator: Poedit 1.5.5\n"
 
 msgid "depcheck"
-msgstr ""
+msgstr "depcheck"
+
 msgid "welcome"
 msgstr ""
-"Bienvenidos a Raspberrymem! Conque esta es la primera ves que eusas "
-"Raspberrymem, necesitas a responder a  unas preguntas. No teva tomar largo, "
-"te lo prometo!"
+"Bienvenidos a Raspberrymem! Ya que esta es la primera vez que usas "
+"Raspberrymem, necesitas responder unas preguntas. No te quitará mucho "
+"tiempo, te lo prometo!"
 
 msgid "fn"
 msgstr "Que es tu nombre?"
@@ -31,8 +32,8 @@ msgstr ""
 
 msgid "registerfailedmsg"
 msgstr ""
-"registration fracasso. Usualmente quiere decir que el servidor no esta "
-"disponible  al momento. Raspberrymem va a intentar registrarte otra ves en "
+"Falla de registro. Usualmente quiere decir que el servidor no esta "
+"disponible  al momento. Raspberrymem va a intentar registrarte otra vez en "
 "un momento."
 
 msgid "next"
@@ -64,11 +65,12 @@ msgstr ""
 "informacion tu has puesto or una seleccion tu hiciste de un menu. El boton "
 "atras, cuando este disponible, va a moverte de regeso a la pantalla previa. "
 "Para presionar el boton siguiente, presiona el tecla enter en tu teclado. "
-"Para presionar el button atras, pressiona el tecla ESC en tu teclado.Ahora "
+"Para presionar el button atras, presiona el tecla ESC en tu teclado.Ahora "
 "presiona el boton siguente para continuar."
 
 msgid "reminders"
-msgstr ""
+msgstr "Programar un recordatorio"
+
 msgid "timer"
 msgstr "configura el temporizador de cuenta regresiva"
 
@@ -112,7 +114,7 @@ msgstr "entra una fecha siguiendo las instrucciones."
 
 msgid "knt6"
 msgstr ""
-"escoge una hora con el \"timebox\". Recuerda, las flechas de izquierda y "
+"escoge una hora con el \"timebox \". Recuerda, las flechas de izquierda y "
 "derecha te mueven entre los valores, las flechas arriba y abajo cambian los "
 "valores. Despues presiona siguiente para terminar el tutorial"
 
@@ -122,11 +124,11 @@ msgstr "recodatorio de una sola vez - sólo activa una vez"
 msgid "rr"
 msgstr ""
 "recordatorio recurrente - se activa semanalmente en los días que se "
-"especificen"
+"especifiquen"
 
 msgid "remindertypemsg"
 msgstr ""
-"escoge el tipo de recordatorio que desee crear, luego pressiona sigiuente "
+"escoge el tipo de recordatorio que desee crear, luego presiona siguiente "
 "para continuar."
 
 msgid "seconds"
@@ -142,21 +144,35 @@ msgid "days"
 msgstr "dias"
 
 msgid "unitprompt"
-msgstr "selecionas el unito de tiempo"
+msgstr "selecionas la unidad de tiempo"
 
 msgid "tnumprompt"
-msgstr "quantos unitos?"
+msgstr "cuantas unidades?"
 
 msgid "rdate"
-msgstr ""
+msgstr "ingresar la fecha de recordatorio"
+
 msgid "rtime"
 msgstr ""
+"ingresa la fecha de recordatorio.Usa las teclas de flecha de arriba y abajo "
+"para cambiar los valores,y las teclas de flecha de izquierda y derecha para "
+"moverte entre los valores. Cuando termines presiona siguiente."
+
 msgid "rmsg"
 msgstr ""
+"ingresa el mensaje de recordatorio despues presiona siguiente para terminar "
+"de configurar tu recordatorio.  "
+
 msgid "rtitle"
-msgstr ""
+msgstr "ponle un nombre a tu recordatorio. Por ejemplo, pastillas"
+
 msgid "rdaysprompt"
 msgstr ""
+"selecciona los dias de la semana en que este recordatorio se activara. Usa "
+"las teclas de flecha de arriba y abajo para moverse entre los dias, y la "
+"barra espaciadora para alternar su seleccion. Despues presione siguiente "
+"para continuar.   "
+
 msgid "sunday"
 msgstr "domingo"
 
@@ -179,73 +195,77 @@ msgid "saturday"
 msgstr "sabado"
 
 msgid "slocale"
-msgstr ""
+msgstr " configuraciones locales"
 
 msgid "sreboot"
-msgstr ""
+msgstr "reiniciar dispositivo"
 
 msgid "srestore"
-msgstr ""
+msgstr "restaura los valores predeterminados de fabrica.   "
 
 msgid "stimezone"
-msgstr ""
+msgstr " fija el horario de zona  "
 
 msgid "snp"
 msgstr "notificacion presentacion"
 
 msgid "sa11y"
-msgstr "accessibilitad"
+msgstr "accesibilidad"
 
 msgid "sadvopts"
-msgstr "advancado"
+msgstr "avanzado"
 
 msgid "sremote"
-msgstr "accesso remota"
+msgstr "acceso remoto"
 
 msgid "slicense"
-msgstr "mirar licensia "
+msgstr "ver licencia "
 
 msgid "slang"
 msgstr "cambiar lenguaje"
 
 msgid "slocaleprompt"
-msgstr ""
+msgstr "para cambiar selecciona una configuracion local  "
 
 msgid "sprompt"
-msgstr ""
+msgstr "para cambiar selecciona una configuracion"
 
 msgid "sabout"
-msgstr ""
+msgstr "acerca del dispositivo  "
 
 msgid "sdevopts"
-msgstr ""
+msgstr "opciones de desarrollo    "
 
 msgid "scredits"
 msgstr "creditos"
 
 msgid "snoa11y"
 msgstr ""
+"Desafortunadamente, en esta version no esta disponible el soporte de "
+"accesibilidad.  "
 
 msgid "shost"
-msgstr ""
+msgstr "fijar el nombre del servidor / direccion IP     "
 
 msgid "shostprompt"
 msgstr ""
+"Para registrarse  ingresar el nombre del servidor o la dirección IP    Enter "
+"the hostname or IP address of the server to register with."
 
 msgid "deviceid"
-msgstr "ID de la machina"
+msgstr "Identificación del dispositivo"
 
 msgid "tup"
-msgstr ""
+msgstr "Tu tiempo se ha terminado."
 
 msgid "dismiss"
-msgstr ""
+msgstr "despedir"
 
 msgid "branchselprompt"
-msgstr ""
+msgstr "selecciona la rama bazar para cambiar a:"
 
 msgid "release"
-msgstr ""
+msgstr "Libera - libera raspberrymem/hitos (recomendado)          "
 
 msgid "trunk"
-msgstr ""
+msgstr "tronco - tronco codigo del bazar (experimental/no recomendado)"
