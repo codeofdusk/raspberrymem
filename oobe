@@ -14,13 +14,7 @@ rm -rf  /etc/raspberrymem.prefs
 echo "loading...................................."
 if [ $1 != "--no-depcheck" ]
 then
-which apt-get &> /dev/null
-if [ $? == 0 ]
-then
-apt-get -qqqq update
-fi
-apt-get -qqqq install gettext
-
+./installpkg gettext
 
 fi
 ./langselect
@@ -28,8 +22,8 @@ fi
 gettext -s "depcheck"
 if [ "$1" == "--no-depcheck" ]
 then
-apt-get --force-yes -qqqq -y install espeak espeakup
-apt-get --force-yes -y -qqqq install bash sox  alsa-base alsa-utils dialog
+./installpkg espeak espeakup
+./installpkg bash sox  alsa-base alsa-utils dialog
 fi
 #run keyboard navigation tutorial
 ./knt
