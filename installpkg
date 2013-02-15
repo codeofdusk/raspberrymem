@@ -1,0 +1,54 @@
+#Copyright 2013 - Bill Dengler
+#raspberrymem is free software: you can redistribute it and/or modify
+#it under the terms of the GNU General Public License as published by
+#the Free Software Foundation, either version 3 of the License, or
+#(at your option) any later version.
+#raspberrymem is distributed in the hope that it will be useful,
+#but WITHOUT ANY WARRANTY; without even the implied warranty of
+#MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#GNU General Public License for more details.
+#You should have received a copy of the GNU General Public License
+#along with raspberrymem.  If not, see http://www.gnu.org/licenses
+#usage info
+if [ $1 == "--help" ]
+then
+exec echo "usage : installpkg <packages>"
+fi
+#find your package manager and install stuff with it
+#Debian based systems
+which apt-get &> /dev/null
+if [ $? == 0 ]
+then
+#update headers for good measure
+apt-get -qqqqq update
+exec apt-get --force-yes -qqqqq -y install $@
+fi
+#fedora/red hat/CENT OS
+which yum &> /dev/null
+if [ $? == 0 ]
+then
+exec yum -y install $@ &> /dev/null
+fi
+#gentoo - keep output for debugging as things could go wrong
+which emerge &> /dev/null
+if [ $? == 0 ]
+then
+exec emerge $@
+fi
+#arch linux - todo : support an aurhelpper as well here
+which pacman &> /dev/null
+if [ $? == 0 ]
+then
+exec pacman -Syy $@
+fi
+#suse - never used it so VERY BLOODY!!!
+which yast &> /dev/null
+if [ $? == 0 ]
+then
+exec yast -i $@
+fi
+#add additional package managers here
+
+#we're here because we couldn't detect which package manager to use
+echo "I couldn't detect your package manager. Oh no!"
+
