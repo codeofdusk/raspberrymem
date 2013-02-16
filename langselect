@@ -11,10 +11,12 @@
 #along with raspberrymem.  If not, see http://www.gnu.org/licenses
 #language selector, the only part of the program with hardcoded messages for obvious reasons.
 #get gettext
-echo "loading...................................."
+echo "loading"
+echo "carga"
+echo "...................................."
 if [ $1 ! == "--no-depcheck" ]
 then
-./installpkg gettext
+./installpkg gettext dialog
 
 fi
 
@@ -33,6 +35,7 @@ if [ $lang = 1 ]
 then
 #english setup
 #generate locales
+clear
 locale-gen --purge en_US.UTF-8
 export LANG=en_US
 #write locale to a preference file to set it in the future
@@ -49,6 +52,7 @@ if [ $lang = 2 ]
 then
 #Spanish setup
 #generate locales
+clear
 locale-gen --purge es_MX.UTF-8
 export LANG=es_MX
 #print WIP message

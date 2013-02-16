@@ -16,7 +16,7 @@ gettext -s "depcheck"
 if [ "$1" == "--no-depcheck" ]
 then
 ./installpkg espeak espeakup
-./installpkg bash sox  alsa-base alsa-utils dialog
+./installpkg bash sox  alsa-base alsa-utils 
 fi
 #start oobe music
 ./oobe-music &
