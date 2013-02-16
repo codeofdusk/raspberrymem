@@ -229,3 +229,9 @@ msgstr ""
 
 msgid "trunk"
 msgstr ""
+
+msgid "wait"
+msgstr ""
+
+msgid "uitext"
+msgstr ""
