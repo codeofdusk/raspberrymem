@@ -9,28 +9,6 @@
 #GNU General Public License for more details.
 #You should have received a copy of the GNU General Public License
 #along with raspberrymem.  If not, see http://www.gnu.org/licenses
-#try to load speakup_soft module
-modprobe speakup_soft &> /dev/null
-if [ $? == 0 ] 
-then
-#we support a11y
-#grab packages
-echo "........"
-./installpkg espeakup
-#do we need a11y?
-./a11y-prompt &
-read -t 15 -n 1 a11y
-killall espeak &> /dev/null
-if [ "$a11y" == "1" ]
-then
-#enable espeakup
-espeakup &> /dev/null
-clear
-fi
-else
-if [ "$1" == "--as-setting" ]
-then
-gettext -s noa11y
-sleep 5
-fi
-fi
+#a11y prompt, a very simple script
+espeak "If you are blind press 1. If not, please wait." &> /dev/null
+espeak -v es-mx "Si usted es ciego pulse 1. Si no, por favor espere" &> /dev/null

@@ -18,6 +18,8 @@ export version="3.0 pre"
 UITEXT="client version $version you are at the main menu. Use the arrow keys to find an option, and then press enter to select it. Note that this is a menu, and so you can't just type into it."
 #start the notification daemon
 ./notificationd &
+#do we need a11y?
+./a11y
 while :
 do
 #set the locale to the one in /etc/raspberrymem.prefs/locale if we have such settings, else determine the language to use first.

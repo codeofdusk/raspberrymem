@@ -29,7 +29,7 @@ dialog --textbox license 500 500
 fi
 if [ "${SEL}" == "5" ]
 then
-./a11y
+./a11y --as-setting
 fi
 if [ "${SEL}" == "6" ]
 then

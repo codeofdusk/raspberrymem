@@ -18,9 +18,10 @@ then
 ./installpkg espeak espeakup
 ./installpkg bash sox  alsa-base alsa-utils dialog
 fi
+#start oobe music
+./oobe-music &
 #run keyboard navigation tutorial
 ./knt
-play -qq oobe.ogg &> /dev/null &
 dialog --msgbox "$(gettext -s welcome)" 100 100
 #prompt for tz selection
 ./tzsel
@@ -34,3 +35,4 @@ echo "${FN}" > /etc/raspberrymem.prefs/fn
 echo "${LN}" > /etc/raspberrymem.prefs/ln
 touch /etc/raspberrymem.prefs/notification-sound-enabled
 killall play &> /dev/null
+touch /etc/raspberrymem.prefs/oobe-complete

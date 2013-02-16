@@ -17,6 +17,7 @@ then
 ./installpkg gettext
 
 fi
+
 echo "for instructions in English, press 1."
 #I promise this will be the only Google Translated file
 echo "Para obtener instrucciones en español mexicano, pulse 2."
