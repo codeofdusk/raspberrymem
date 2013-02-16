@@ -11,7 +11,6 @@
 #along with raspberrymem.  If not, see http://www.gnu.org/licenses
 #delete any pre-existing config file
 rm -rf  /etc/raspberrymem.prefs
-./langselect
 #do a dependancy check
 gettext -s "depcheck"
 if [ "$1" == "--no-depcheck" ]
@@ -35,4 +34,3 @@ echo "${FN}" > /etc/raspberrymem.prefs/fn
 echo "${LN}" > /etc/raspberrymem.prefs/ln
 touch /etc/raspberrymem.prefs/notification-sound-enabled
 killall play &> /dev/null
-touch /etc/raspberrymem.prefs/oobe-complete

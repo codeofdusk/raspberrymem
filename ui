@@ -16,28 +16,24 @@ export raspberrymem_location="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 #version number, edit for new releases
 export version="3.0 pre"
 UITEXT="client version $version you are at the main menu. Use the arrow keys to find an option, and then press enter to select it. Note that this is a menu, and so you can't just type into it."
+#start the notification daemon
+./notificationd &
+while :
+do
 #set the locale to the one in /etc/raspberrymem.prefs/locale if we have such settings, else determine the language to use first.
 if [ ! -d /etc/raspberrymem.prefs ] 
 then
 ./langselect $1
 fi
 export LC_ALL=$(cat /etc/raspberrymem.prefs/locale)
-#initial oobe check
-if [ ! -f /etc/raspberrymem.prefs/oobe-complete ]
+#oobe check
+if [ -d /etc/raspberrymem.prefs ]
 then
-./oobe $1
+./oobe
 fi
-#start the notification daemon
-./notificationd &
-while :
-do
 #merge latest code from bzr
 echo "please wait"
 bzr update &> /dev/null
-if [ ! -d /etc/raspberrymem.prefs ]
-then
-exec ./oobe
-fi
 #insure we have a recurring-reminders directory
 if [ ! -d /etc/raspberrymem.prefs/recurring-reminders ]
 then

@@ -12,7 +12,7 @@
 #language selector, the only part of the program with hardcoded messages for obvious reasons.
 #get gettext
 echo "loading...................................."
-if [ $1 != "--no-depcheck" ]
+if [ $1 ! == "--no-depcheck" ]
 then
 ./installpkg gettext
 
@@ -36,11 +36,13 @@ locale-gen --purge en_US.UTF-8
 export LANG=en_US
 #write locale to a preference file to set it in the future
 echo "en_US.UTF-8" > /etc/raspberrymem.prefs/locale
+#set the locale now
+export LC_ALL=$(cat /etc/raspberrymem.prefs/locale)
 #make directory tree
 mkdir -p /usr/share/locale/en_US/LC_MESSAGES &> /dev/null
 msgfmt -o /usr/share/locale/en_US/LC_MESSAGES/raspberrymem.mo en_US.po
 echo "You will be prompted in English from now on."
-exit 0
+exec ./ui
 fi
 if [ $lang = 2 ]
 then
@@ -52,11 +54,14 @@ export LANG=es_MX
 echo "La traducción al español es un trabajo en progreso. Por lo tanto, puede contener algunos mensajes en inglés. Gracias por su comprensión."
 #write locale to a preference file to set it in the future
 echo "es_MX.UTF-8" > /etc/raspberrymem.prefs/locale
+
+#set the locale now
+export LC_ALL=$(cat /etc/raspberrymem.prefs/locale)
 #make directory tree
 mkdir -p /usr/share/locale/es_MX/LC_MESSAGES &> /dev/null
 msgfmt -o /usr/share/locale/es_MX/LC_MESSAGES/raspberrymem.mo es_MX.po
 echo "Ahora se le pedirá en español"
-exit 0
+exec ./ui
 fi
 #we've reached this point, so an invalid language number was entered.
 exec ./langselect
