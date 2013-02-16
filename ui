@@ -30,7 +30,7 @@ fi
 export LC_ALL=$(cat /etc/raspberrymem.prefs/locale)
 export DIALOGOPTS="--visit-items --ok-label \"$(gettext -s \"next\")\" --cancel-label \"$(gettext -s \"back\")\""
 #oobe check
-if [ -d /etc/raspberrymem.prefs ]
+if [ ! -d /etc/raspberrymem.prefs ]
 then
 ./oobe
 fi
