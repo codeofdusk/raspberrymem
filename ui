@@ -33,7 +33,7 @@ then
 ./oobe
 fi
 #merge latest code from bzr
-echo "please wait"
+gettext -s wait
 bzr update &> /dev/null
 #insure we have a recurring-reminders directory
 if [ ! -d /etc/raspberrymem.prefs/recurring-reminders ]

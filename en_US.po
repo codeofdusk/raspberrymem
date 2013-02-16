@@ -226,3 +226,5 @@ msgstr "release - raspberrymem releases/milestones(recommended)"
 msgid "trunk"
 msgstr "trunk - trunk code from bazaar(experimental/not recommended)"
 
+msgid "wait"
+msgstr "Please wait"

@@ -269,3 +269,7 @@ msgstr "Libera - libera raspberrymem/hitos (recomendado)          "
 
 msgid "trunk"
 msgstr "tronco - tronco codigo del bazar (experimental/no recomendado)"
+
+msgid "wait"
+msgstr "Por favor, espere"
+
