@@ -1,5 +1,3 @@
-export DIALOGOPTS="--visit-items --ok-label \"$(gettext -s \"next\")\" --cancel-label \"$(gettext -s \"back\")\""
-export TEXTDOMAIN="raspberrymem"
 #Copyright 2013 - Bill Dengler
 #raspberrymem is free software: you can redistribute it and/or modify
 #it under the terms of the GNU General Public License as published by
@@ -11,6 +9,8 @@ export TEXTDOMAIN="raspberrymem"
 #GNU General Public License for more details.
 #You should have received a copy of the GNU General Public License
 #along with raspberrymem.  If not, see http://www.gnu.org/licenses
+#gettext stuff
+export TEXTDOMAIN="raspberrymem"
 #export current raspberrymem location to a variable for execution of cron jobs and other scripts
 export raspberrymem_location="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 #version number, edit for new releases
@@ -26,6 +26,7 @@ then
 ./langselect $1
 fi
 export LC_ALL=$(cat /etc/raspberrymem.prefs/locale)
+export DIALOGOPTS="--visit-items --ok-label \"$(gettext -s \"next\")\" --cancel-label \"$(gettext -s \"back\")\""
 #oobe check
 if [ -d /etc/raspberrymem.prefs ]
 then
