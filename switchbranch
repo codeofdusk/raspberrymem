@@ -9,11 +9,9 @@
 #GNU General Public License for more details.
 #You should have received a copy of the GNU General Public License
 #along with raspberrymem.  If not, see http://www.gnu.org/licenses
-#write what we want to do to a shell script for better reliability
-echo "rm -rf $raspberrymem_location" > /tmp/switchbranch
-echo "bzr checkout $1 $raspberrymem_location" >> /tmp/switchbranch
-echo "cd $raspberrymem_location" >> /tmp/switchbranch
-echo "rm -rf /etc/raspberrymem.prefs" >> /tmp/switchbranch
-echo "exec ./ui" >> /tmp/switchbranch
-chmod +x /tmp/switchbranch
-exec /tmp/switchbranch
+#check out the requested branch
+bzr checkout $1 newbranch
+mv newbranch/* $(pwd)
+rm -rf newbranch
+rm -rf /etc/raspberrymem.prefs
+exec ./ui
