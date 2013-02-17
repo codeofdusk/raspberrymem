@@ -10,6 +10,21 @@
 #You should have received a copy of the GNU General Public License
 #along with raspberrymem.  If not, see http://www.gnu.org/licenses
 #language selector, the only part of the program with hardcoded messages for obvious reasons.
+#First, learn about our environment
+which locale-gen &> /dev/null
+if [ $? == 1 ]
+then
+echo "Oh dear! I can't figure out where locale-gen is located on your system. Therefore, I can't generate a locale or gettext machine object files for you! Press any key or wait to continue anyway..."
+read -t 10 -n 1 nolocalecontinue
+exit 1
+fi
+#now, we figure out how locale generation is performed
+if [ -f /etc/locale.gen ]
+then
+file_method=1
+else
+file_method=0
+fi
 #get gettext
 echo "loading"
 echo "carga"
@@ -36,7 +51,22 @@ then
 #english setup
 #generate locales
 clear
-locale-gen --purge en_US.UTF-8
+if [ $file_method == 1 ]
+then
+#determine if we need to generate a locale
+grep "en_US.UTF-8" /etc/locale.gen &> /dev/null
+if [ "$?" == "1" ]
+then
+#we need to generate a locale
+echo "#start raspberrymem modifications" >> /etc/locale.gen
+echo "en_US.UTF-8" >> /etc/locale.gen
+echo "#end raspberrymem modifications" >> /etc/locale.gen
+locale-gen
+else
+locale-gen en_US.UTF-8
+fi
+fi
+
 export LANG=en_US
 #write locale to a preference file to set it in the future
 echo "en_US.UTF-8" > /etc/raspberrymem.prefs/locale
@@ -53,7 +83,21 @@ then
 #Spanish setup
 #generate locales
 clear
-locale-gen --purge es_MX.UTF-8
+if [ $file_method == 1 ]
+then
+#determine if we need to generate a locale
+grep "es_MX.UTF-8" /etc/locale.gen &> /dev/null
+if [ "$?" == "1" ]
+then
+#we need to generate a locale
+echo "#start raspberrymem modifications" >> /etc/locale.gen
+echo "es_MX.UTF-8" >> /etc/locale.gen
+echo "#end raspberrymem modifications" >> /etc/locale.gen
+locale-gen
+else
+locale-gen es_MX.UTF-8
+fi
+fi
 export LANG=es_MX
 #print WIP message
 echo "La traducción al español es un trabajo en progreso. Por lo tanto, puede contener algunos mensajes en inglés. Gracias por su comprensión."
