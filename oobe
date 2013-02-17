@@ -34,5 +34,5 @@ export LN=$(dialog --no-cancel --stdout  --inputbox "$(gettext -s ln)" 40 40)
 echo "${FN}" > /etc/raspberrymem.prefs/fn
 echo "${LN}" > /etc/raspberrymem.prefs/ln
 touch /etc/raspberrymem.prefs/notification-sound-enabled
-killall play &> /dev/null
 touch /etc/raspberrymem.prefs/oobe-complete
+killall play &> /dev/null
