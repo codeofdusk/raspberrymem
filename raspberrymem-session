@@ -11,11 +11,11 @@
 #along with raspberrymem.  If not, see http://www.gnu.org/licenses
 #first, terminate speakup and start orca if required
 pidof espeakup &> /dev/null
-if [ "$?" == "0" ]
+if [ $? == 0 ]
 then
 killall espeakup &> /dev/null
 modprobe -r speakup_soft &> /dev/null
-orca &
+orca --replace &
 fi
 #print gnome usage message
 zenity --info --text "$(gettext -s gnomeusage)"
