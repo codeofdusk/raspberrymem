@@ -10,7 +10,7 @@
 #You should have received a copy of the GNU General Public License
 #along with raspberrymem.  If not, see http://www.gnu.org/licenses
 #first, terminate speakup and start orca if required
-lsmod | grep speakup_soft &> /dev/null
+pidof espeakup &> /dev/null
 if [ "$?" == "0" ]
 then
 killall espeakup &> /dev/null
