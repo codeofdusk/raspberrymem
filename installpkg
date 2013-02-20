@@ -14,6 +14,11 @@ if [ $1 == "--help" ]
 then
 exec echo "usage : installpkg <packages>"
 fi
+#if we have the --no-depcheck flag exit because we're on a slow connection on a est platform and we know we have everything we need
+if [ $1 == "--no-depcheck" ]
+then
+exit
+fi
 #find your package manager and install stuff with it
 #Debian based systems
 which apt-get &> /dev/null

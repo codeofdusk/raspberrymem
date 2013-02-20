@@ -32,7 +32,7 @@ export DIALOGOPTS="--visit-items --ok-label \"$(gettext -s \"next\")\" --cancel-
 #oobe check
 if [ ! -f /etc/raspberrymem.prefs/oobe-complete ]
 then
-./oobe
+./oobe $1
 fi
 #merge latest code from bzr
 gettext -s wait
@@ -51,7 +51,7 @@ if [ ! -f /etc/raspberrymem.prefs/deviceid ]
 then
 ./register
 fi
-export USERSEL=$(dialog --no-cancel --stdout --menu "${UITEXT}" 50 50 5 1 "$(gettext -s reminders)" 2 "$(gettext -s timer)" 3 "$(gettext -s notes)" 4 "$(gettext -s settings)" "n" "$(gettext -s notifications)")
+export USERSEL=$(dialog --no-cancel --stdout --menu "${UITEXT}" 50 50 6 1 "$(gettext -s reminders)" 2 "$(gettext -s timer)" 3 "$(gettext -s notes)" 4 "$(gettext -s settings)" "5" "$(gettext -s startx)" "n" "$(gettext -s notifications)")
 if [ "$USERSEL" == "3" ]
 then
 ./note-editor
@@ -73,4 +73,7 @@ if [ "${USERSEL}" == "n" ]
 then
 ./notifications
 fi
+if [ "${USERSEL}" == "5" ]
+then
+xinit $(pwd)/raspberrymem-session &> /dev/null &
 done

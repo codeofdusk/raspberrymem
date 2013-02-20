@@ -15,8 +15,8 @@ rm -rf  /etc/raspberrymem.prefs
 gettext -s "depcheck"
 if [ "$1" == "--no-depcheck" ]
 then
-./installpkg espeak espeakup
-./installpkg bash sox  alsa-base alsa-utils 
+./installpkg espeak espeakup xorg gnome-orca
+./installpkg bash sox  alsa-base alsa-utils gnome-session-fallback 
 fi
 #start oobe music
 ./oobe-music &
