@@ -76,4 +76,5 @@ fi
 if [ "${USERSEL}" == "5" ]
 then
 xinit $(pwd)/raspberrymem-session &> /dev/null &
+fi
 done
