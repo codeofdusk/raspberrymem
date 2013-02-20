@@ -235,3 +235,13 @@ msgstr ""
 
 msgid "uitext"
 msgstr ""
+
+msgid "cliver"
+msgstr ""
+
+msgid "startx"
+msgstr ""
+
+msgid "gnomeusage"
+msgstr ""
+

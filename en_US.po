@@ -228,3 +228,14 @@ msgstr "trunk - trunk code from bazaar(experimental/not recommended)"
 
 msgid "wait"
 msgstr "Please wait"
+
+msgid "uitext"
+msgstr "you are at the main menu. Use the arrow keys to find an option, and then press enter to select it. Note that this is a menu, and so you can't just type into it."
+msgid "cliver"
+msgstr "client version"
+
+msgid "startx"
+msgstr "graphical desktop"
+
+msgid "gnomeusage"
+msgstr "Welcome to the graphical desktop! Here are a few helpful commands that will allow you to get started. To open the menu of programs, hold down ALT, tap F1, and then release ALT. You can use up, down, left, and right arrow keys as well as the enter key in this menu to open your applications. While inside an application, you may use the tab and shift tab keys to move between sections of your application, the enter key to press buttons on the screen, and the arrow keys to move through screens. While in graphical desktop mode, you may also hold down CTRL and ALT, tap F1, and release all keys to return to the Raspberrymem main menu. To continue on to the graphical desktop and close this help message, press the enter key."
