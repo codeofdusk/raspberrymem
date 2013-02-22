@@ -27,7 +27,10 @@ if [ ! -d /etc/raspberrymem.prefs ]
 then
 ./langselect $1
 fi
+if [ ! -f /etc/default/locale ]
+then
 export LC_ALL=$(cat /etc/raspberrymem.prefs/locale)
+fi
 export DIALOGOPTS="--visit-items --ok-label \"$(gettext -s \"next\")\" --cancel-label \"$(gettext -s \"back\")\""
 #oobe check
 if [ ! -f /etc/raspberrymem.prefs/oobe-complete ]

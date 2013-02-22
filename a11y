@@ -18,9 +18,8 @@ then
 echo "........"
 ./installpkg espeakup
 #do we need a11y?
-./a11y-prompt &
+espeak "If you are blind press 1. If not, please wait." &> /dev/null ; espeak -v es-mx "Si usted es ciego pulse 1. Si no, por favor espere" &> /dev/null &
 read -t 15 -n 1 a11y
-killall espeak &> /dev/null
 killall espeak &> /dev/null
 if [ "$a11y" == "1" ]
 then
