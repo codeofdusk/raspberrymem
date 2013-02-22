@@ -21,6 +21,7 @@ echo "........"
 ./a11y-prompt &
 read -t 15 -n 1 a11y
 killall espeak &> /dev/null
+killall espeak &> /dev/null
 if [ "$a11y" == "1" ]
 then
 #enable espeakup

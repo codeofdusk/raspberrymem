@@ -11,45 +11,56 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.5.5\n"
 
-msgid "depcheck"
-msgstr "depcheck"
-
-msgid "welcome"
-msgstr ""
-"Bienvenidos a Raspberrymem! Ya que esta es la primera vez que usas "
-"Raspberrymem, necesitas responder unas preguntas. No te quitará mucho "
-"tiempo, te lo prometo!"
-
-msgid "fn"
-msgstr "Que es tu nombre?"
-
-msgid "ln"
-msgstr "Que es tu apellido?"
-
-msgid "registermsg"
-msgstr ""
-"Raspberrymem esta intentando registrar te con el servidor. Por favor espera."
-
-msgid "registerfailedmsg"
-msgstr ""
-"Falla de registro. Usualmente quiere decir que el servidor no esta "
-"disponible  al momento. Raspberrymem va a intentar registrarte otra vez en "
-"un momento."
-
-msgid "next"
-msgstr "siguiente"
-
 msgid "back"
 msgstr "atras"
 
-msgid "monthprompt"
-msgstr "Pon el numero mes, por ejemplo 01 de Enero"
+msgid "branchselprompt"
+msgstr "selecciona la rama bazar para cambiar a:"
+
+msgid "cliver"
+msgstr "versión del cliente"
 
 msgid "dayprompt"
 msgstr "Pon el numero del dia, por ejemplo 05."
 
-msgid "yearprompt"
-msgstr "Pon el numero del año, por ejemplo 1982"
+msgid "days"
+msgstr "dias"
+
+msgid "depcheck"
+msgstr "depcheck"
+
+msgid "deviceid"
+msgstr "Identificación del dispositivo"
+
+msgid "dismiss"
+msgstr "despedir"
+
+msgid "fn"
+msgstr "Que es tu nombre?"
+
+msgid "friday"
+msgstr "vienes"
+
+msgid "games"
+msgstr "juegos"
+
+msgid "gnomeusage"
+msgstr ""
+"Bienvenidos al escritorio gráfico! Aqui estan algunos comandos adjuntos para "
+"empezar. Para abrir el menu de programas, mantenga pulsada la tecla ALT, "
+"pulsa F1, y luego suelta ALT. Tu puedes usar las teclas arriba, abajo, "
+"izquierda, y derecha igual que la tecla Enter en este menú para abrir las "
+"aplicaciones. Mientras estas dentro de una aplicación, puedes utilizar las "
+"teclas Tab y Shift para moverte entre las secciones de tu aplicación, la "
+"tecla Enter para presionar botones en la pantalla, y las teclas de flecha "
+"para moverte por pantallas. Mientras que en modo de escritorio gráfico , "
+"tambien puedes mantener presionado ALT y CTRL , presionar F1 y soltar todas "
+"las teclas para regresar al menú principal de Raspberrymem. Para continuar "
+"en el escritorio gráfico y cerrar éste mensaje de ayuda, presione la tecla "
+"Enter.  "
+
+msgid "hours"
+msgstr "horas "
 
 msgid "knt1"
 msgstr ""
@@ -67,24 +78,6 @@ msgstr ""
 "Para presionar el boton siguiente, presiona el tecla enter en tu teclado. "
 "Para presionar el button atras, presiona el tecla ESC en tu teclado.Ahora "
 "presiona el boton siguente para continuar."
-
-msgid "reminders"
-msgstr "Programar un recordatorio"
-
-msgid "timer"
-msgstr "configura el temporizador de cuenta regresiva"
-
-msgid "notes"
-msgstr "escribe tus propios recordatorios"
-
-msgid "settings"
-msgstr "cambia la configuracion de Raspberrymem."
-
-msgid "games"
-msgstr "juegos"
-
-msgid "notifications"
-msgstr "lee el libro"
 
 msgid "knt3"
 msgstr ""
@@ -118,53 +111,32 @@ msgstr ""
 "derecha te mueven entre los valores, las flechas arriba y abajo cambian los "
 "valores. Despues presiona siguiente para terminar el tutorial"
 
-msgid "otr"
-msgstr "recodatorio de una sola vez - sólo activa una vez"
-
-msgid "rr"
-msgstr ""
-"recordatorio recurrente - se activa semanalmente en los días que se "
-"especifiquen"
-
-msgid "remindertypemsg"
-msgstr ""
-"escoge el tipo de recordatorio que desee crear, luego presiona siguiente "
-"para continuar."
-
-msgid "seconds"
-msgstr "segundos"
+msgid "ln"
+msgstr "Que es tu apellido?"
 
 msgid "minutes"
 msgstr "minutos"
 
-msgid "hours"
-msgstr "horas "
+msgid "monday"
+msgstr "lunes"
 
-msgid "days"
-msgstr "dias"
+msgid "monthprompt"
+msgstr "Pon el numero mes, por ejemplo 01 de Enero"
 
-msgid "unitprompt"
-msgstr "selecionas la unidad de tiempo"
+msgid "next"
+msgstr "siguiente"
 
-msgid "tnumprompt"
-msgstr "cuantas unidades?"
+msgid "notes"
+msgstr "escribe tus propios recordatorios"
+
+msgid "notifications"
+msgstr "lee el libro"
+
+msgid "otr"
+msgstr "recodatorio de una sola vez - sólo activa una vez"
 
 msgid "rdate"
 msgstr "ingresar la fecha de recordatorio"
-
-msgid "rtime"
-msgstr ""
-"ingresa la fecha de recordatorio.Usa las teclas de flecha de arriba y abajo "
-"para cambiar los valores,y las teclas de flecha de izquierda y derecha para "
-"moverte entre los valores. Cuando termines presiona siguiente."
-
-msgid "rmsg"
-msgstr ""
-"ingresa el mensaje de recordatorio despues presiona siguiente para terminar "
-"de configurar tu recordatorio.  "
-
-msgid "rtitle"
-msgstr "ponle un nombre a tu recordatorio. Por ejemplo, pastillas"
 
 msgid "rdaysprompt"
 msgstr ""
@@ -173,76 +145,69 @@ msgstr ""
 "barra espaciadora para alternar su seleccion. Despues presione siguiente "
 "para continuar.   "
 
-msgid "sunday"
-msgstr "domingo"
+msgid "registerfailedmsg"
+msgstr ""
+"Falla de registro. Usualmente quiere decir que el servidor no esta "
+"disponible  al momento. Raspberrymem va a intentar registrarte otra vez en "
+"un momento."
 
-msgid "monday"
-msgstr "lunes"
+msgid "registermsg"
+msgstr ""
+"Raspberrymem esta intentando registrar te con el servidor. Por favor espera."
 
-msgid "tuesday"
-msgstr "martes"
+msgid "release"
+msgstr "Libera - libera raspberrymem/hitos (recomendado)          "
 
-msgid "wednesday"
-msgstr "miercoles"
+msgid "reminders"
+msgstr "Programar un recordatorio"
 
-msgid "thursday"
-msgstr "jueves"
+msgid "remindertypemsg"
+msgstr ""
+"escoge el tipo de recordatorio que desee crear, luego presiona siguiente "
+"para continuar."
 
-msgid "friday"
-msgstr "vienes"
+msgid "rmsg"
+msgstr ""
+"ingresa el mensaje de recordatorio despues presiona siguiente para terminar "
+"de configurar tu recordatorio.  "
 
-msgid "saturday"
-msgstr "sabado"
+msgid "rr"
+msgstr ""
+"recordatorio recurrente - se activa semanalmente en los días que se "
+"especifiquen"
 
-msgid "slocale"
-msgstr " configuraciones locales"
+msgid "rtime"
+msgstr ""
+"ingresa la fecha de recordatorio.Usa las teclas de flecha de arriba y abajo "
+"para cambiar los valores,y las teclas de flecha de izquierda y derecha para "
+"moverte entre los valores. Cuando termines presiona siguiente."
 
-msgid "sreboot"
-msgstr "reiniciar dispositivo"
-
-msgid "srestore"
-msgstr "restaura los valores predeterminados de fabrica.   "
-
-msgid "stimezone"
-msgstr " fija el horario de zona  "
-
-msgid "snp"
-msgstr "notificacion presentacion"
+msgid "rtitle"
+msgstr "ponle un nombre a tu recordatorio. Por ejemplo, pastillas"
 
 msgid "sa11y"
 msgstr "accesibilidad"
 
-msgid "sadvopts"
-msgstr "avanzado"
-
-msgid "sremote"
-msgstr "acceso remoto"
-
-msgid "slicense"
-msgstr "ver licencia "
-
-msgid "slang"
-msgstr "cambiar lenguaje"
-
-msgid "slocaleprompt"
-msgstr "para cambiar selecciona una configuracion local  "
-
-msgid "sprompt"
-msgstr "para cambiar selecciona una configuracion"
-
 msgid "sabout"
 msgstr "acerca del dispositivo  "
 
-msgid "sdevopts"
-msgstr "opciones de desarrollo    "
+msgid "sadvopts"
+msgstr "avanzado"
+
+msgid "saturday"
+msgstr "sabado"
 
 msgid "scredits"
 msgstr "creditos"
 
-msgid "snoa11y"
-msgstr ""
-"Desafortunadamente, en esta version no esta disponible el soporte de "
-"accesibilidad.  "
+msgid "sdevopts"
+msgstr "opciones de desarrollo    "
+
+msgid "seconds"
+msgstr "segundos"
+
+msgid "settings"
+msgstr "cambia la configuracion de Raspberrymem."
 
 msgid "shost"
 msgstr "fijar el nombre del servidor / direccion IP     "
@@ -252,34 +217,85 @@ msgstr ""
 "Para registrarse  ingresar el nombre del servidor o la dirección IP    Enter "
 "the hostname or IP address of the server to register with."
 
-msgid "deviceid"
-msgstr "Identificación del dispositivo"
+msgid "slang"
+msgstr "cambiar lenguaje"
 
-msgid "tup"
-msgstr "Tu tiempo se ha terminado."
+msgid "slicense"
+msgstr "ver licencia "
 
-msgid "dismiss"
-msgstr "despedir"
+msgid "slocale"
+msgstr " configuraciones locales"
 
-msgid "branchselprompt"
-msgstr "selecciona la rama bazar para cambiar a:"
+msgid "slocaleprompt"
+msgstr "para cambiar selecciona una configuracion local  "
 
-msgid "release"
-msgstr "Libera - libera raspberrymem/hitos (recomendado)          "
+msgid "snoa11y"
+msgstr ""
+"Desafortunadamente, en esta version no esta disponible el soporte de "
+"accesibilidad.  "
+
+msgid "snp"
+msgstr "notificacion presentacion"
+
+msgid "sprompt"
+msgstr "para cambiar selecciona una configuracion"
+
+msgid "sreboot"
+msgstr "reiniciar dispositivo"
+
+msgid "sremote"
+msgstr "acceso remoto"
+
+msgid "srestore"
+msgstr "restaura los valores predeterminados de fabrica.   "
+
+msgid "startx"
+msgstr "escritorio gráfico"
+
+msgid "stimezone"
+msgstr " fija el horario de zona  "
+
+msgid "sunday"
+msgstr "domingo"
+
+msgid "thursday"
+msgstr "jueves"
+
+msgid "timer"
+msgstr "configura el temporizador de cuenta regresiva"
+
+msgid "tnumprompt"
+msgstr "cuantas unidades?"
 
 msgid "trunk"
 msgstr "tronco - tronco codigo del bazar (experimental/no recomendado)"
 
+msgid "tuesday"
+msgstr "martes"
+
+msgid "tup"
+msgstr "Tu tiempo se ha terminado."
+
+msgid "uitext"
+msgstr ""
+"este es el menu. Usa las teclas de flecha para buscar una opción, despues "
+"presiona la tecla Enter para seleccionar. Tenga cuenta que este es un menú, "
+"y usted simplemente no puede escribir en él."
+
+msgid "unitprompt"
+msgstr "selecionas la unidad de tiempo"
+
 msgid "wait"
 msgstr "Por favor, espere"
 
-msgid "uitext"
-msgstr "you are at the main menu. Use the arrow keys to find an option, and then press enter to select it. Note that this is a menu, and so you can't just type into it."
-msgid "cliver"
-msgstr "client version"
+msgid "wednesday"
+msgstr "miercoles"
 
-msgid "startx"
-msgstr "graphical desktop"
+msgid "welcome"
+msgstr ""
+"Bienvenidos a Raspberrymem! Ya que esta es la primera vez que usas "
+"Raspberrymem, necesitas responder unas preguntas. No te quitará mucho "
+"tiempo, te lo prometo!"
 
-msgid "gnomeusage"
-msgstr "Welcome to the graphical desktop! Here are a few helpful commands that will allow you to get started. To open the menu of programs, hold down ALT, tap F1, and then release ALT. You can use up, down, left, and right arrow keys as well as the enter key in this menu to open your applications. While inside an application, you may use the tab and shift tab keys to move between sections of your application, the enter key to press buttons on the screen, and the arrow keys to move through screens. While in graphical desktop mode, you may also hold down CTRL and ALT, tap F1, and release all keys to return to the Raspberrymem main menu. To continue on to the graphical desktop and close this help message, press the enter key."
+msgid "yearprompt"
+msgstr "Pon el numero del año, por ejemplo 1982"
