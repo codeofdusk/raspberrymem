@@ -47,7 +47,6 @@ mkdir /etc/raspberrymem.prefs
 mkdir /etc/raspberrymem.prefs/recurring-reminders
 touch /etc/raspberrymem.prefs/notes
 
-
 if [ $lang = 1 ]
 then
 #english setup
