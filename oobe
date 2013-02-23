@@ -13,7 +13,7 @@
 rm -rf  /etc/raspberrymem.prefs
 #do a dependancy check
 gettext -s "depcheck"
-if [ "$1" == "--no-depcheck" ]
+if [ ! "$1" == "--no-depcheck" ]
 then
 ./installpkg espeak espeakup xorg gnome-orca
 ./installpkg  sox  alsa-base alsa-utils gnome-session-fallback 
