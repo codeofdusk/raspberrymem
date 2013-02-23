@@ -14,7 +14,7 @@ export TEXTDOMAIN="raspberrymem"
 #export current raspberrymem location to a variable for execution of cron jobs and other scripts
 export raspberrymem_location="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 #version number, edit for new releases
-export version="3.0 pre"
+export version="3.0"
 UITEXT="$(gettext -s cliver) $version $(gettext -s uitext)"
 #start the notification daemon
 ./notificationd &
