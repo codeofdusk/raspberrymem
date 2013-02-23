@@ -26,6 +26,8 @@ then
 #enable espeakup
 espeakup &> /dev/null
 clear
+else
+modprobe -r speakup_soft &> /dev/null
 fi
 else
 if [ "$1" == "--as-setting" ]

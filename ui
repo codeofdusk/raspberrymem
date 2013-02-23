@@ -24,14 +24,9 @@ then
 fi
 while :
 do
-#set the locale to the one in /etc/raspberrymem.prefs/locale if we have such settings, else determine the language to use first.
 if [ ! -d /etc/raspberrymem.prefs ] 
 then
 ./langselect $1
-fi
-if [ ! -f /etc/default/locale ]
-then
-export LC_ALL=$(cat /etc/raspberrymem.prefs/locale)
 fi
 export DIALOGOPTS="--visit-items --ok-label \"$(gettext -s \"next\")\" --cancel-label \"$(gettext -s \"back\")\""
 #oobe check
