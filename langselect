@@ -27,7 +27,7 @@ echo "Para obtener instrucciones en español mexicano, pulse 2."
 read -n 1 sel
 killall espeak &> /dev/null
 #generate a new directory to store preferences
-mkdir /etc/raspberrymem.prefs
+mkdir -p  /etc/raspberrymem.prefs
 #create reminders and notes files for future use. If they already exist, the access times will be updated but the files will remain intact.
 mkdir /etc/raspberrymem.prefs/recurring-reminders
 touch /etc/raspberrymem.prefs/notes
