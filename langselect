@@ -9,22 +9,7 @@
 #GNU General Public License for more details.
 #You should have received a copy of the GNU General Public License
 #along with raspberrymem.  If not, see http://www.gnu.org/licenses
-#language selector, the only part of the program with hardcoded messages for obvious reasons.
-#First, learn about our environment
-which locale-gen &> /dev/null
-if [ $? == 1 ]
-then
-echo "Oh dear! I can't figure out where locale-gen is located on your system. Therefore, I can't generate a locale or gettext machine object files for you! Press any key or wait to continue anyway..."
-read -t 10 -n 1 nolocalecontinue
-exit 1
-fi
-#now, we figure out how locale generation is performed
-if [ -f /etc/locale.gen ]
-then
-file_method=1
-else
-file_method=0
-fi
+#LANGuage selector, the only part of the program with hardcoded messages for obvious reasons.
 #get gettext
 echo "loading"
 echo "carga"
@@ -39,100 +24,35 @@ echo "for instructions in English, press 1."
 
 #I promise this will be the only Google Translated file
 echo "Para obtener instrucciones en español mexicano, pulse 2."
-read -n 1 lang
+read -n 1 sel
 killall espeak &> /dev/null
 #generate a new directory to store preferences
 mkdir /etc/raspberrymem.prefs
 #create reminders and notes files for future use. If they already exist, the access times will be updated but the files will remain intact.
 mkdir /etc/raspberrymem.prefs/recurring-reminders
 touch /etc/raspberrymem.prefs/notes
-
-if [ $lang = 1 ]
+#find our USABLE_LANG and then create directory tree
+USABLE_LANG=$(echo $LANG | cut -d "." -f 1)
+echo "this is debug output : USABLE_LANG $USABLE_LANG"
+mkdir -p /usr/share/locale/$USABLE_LANG/LC_MESSAGES &> /dev/null
+if [ $sel = 1 ]
 then
 #english setup
-#generate locales
-clear
-if [ $file_method == 1 ]
-then
-#determine if we need to generate a locale
-grep "en_US.UTF-8" /etc/locale.gen &> /dev/null
-if [ "$?" == "1" ]
-then
-#we need to generate a locale
-echo "#start raspberrymem modifications" >> /etc/locale.gen
-echo "en_US.UTF-8" >> /etc/locale.gen
-echo "#end raspberrymem modifications" >> /etc/locale.gen
-locale-gen
-else
-locale-gen en_US.UTF-8
-fi
-fi
-
-export LANG=en_US
-#write locale to a preference file to set it in the future
-echo "en_US.UTF-8" > /etc/raspberrymem.prefs/locale
-#set the locale now
-#make directory tree
-mkdir -p /usr/share/locale/en_US/LC_MESSAGES &> /dev/null
-msgfmt -o /usr/share/locale/en_US/LC_MESSAGES/raspberrymem.mo en_US.po
+msgfmt -o /usr/share/locale/$USABLE_LANG/LC_MESSAGES/raspberrymem.mo en_US.po
 echo "You will be prompted in English from now on."
-#Debian based mods
-if [ -f /etc/default/locale ]
-then
-#we're on a Debian system
-echo "#modified by Raspberrymem" > /etc/default/locale
-echo "LANG=\"en_US.UTF-8\"" >> /etc/default/locale
-else
-#we're not on Debian, so use an environment variable(very broken at the moment)
-export LC_ALL=$(cat /etc/raspberrymem.prefs/locale)
-
-fi
 exec ./ui
 fi
-if [ $lang = 2 ]
+if [ $sel = 2 ]
 then
 #Spanish setup
-#generate locales
-clear
-if [ $file_method == 1 ]
-then
-#determine if we need to generate a locale
-grep "es_MX.UTF-8" /etc/locale.gen &> /dev/null
-if [ "$?" == "1" ]
-then
-#we need to generate a locale
-echo "#start raspberrymem modifications" >> /etc/locale.gen
-echo "es_MX.UTF-8" >> /etc/locale.gen
-echo "#end raspberrymem modifications" >> /etc/locale.gen
-locale-gen
-else
-locale-gen es_MX.UTF-8
-fi
-fi
-export LANG=es_MX
 #print WIP message
 echo "La traducción al español es un trabajo en progreso. Por lo tanto, puede contener algunos mensajes en inglés. Gracias por su comprensión."
 #write locale to a preference file to set it in the future
 echo "es_MX.UTF-8" > /etc/raspberrymem.prefs/locale
+msgfmt -o /usr/share/locale/$USABLE_LANG/LC_MESSAGES/raspberrymem.mo es_MX.po
 
-#set the locale now
-#Debian based mods
-if [ -f /etc/default/locale ]
-then
-#we're on a Debian system
-echo "#modified by Raspberrymem" > /etc/default/locale
-echo "LANG=\"es_MX.UTF-8\"" >> /etc/default/locale
-else
-#we're not on Debian, so use an environment variable(very broken at the moment)
-export LC_ALL=$(cat /etc/raspberrymem.prefs/locale)
-
-fi
-
-#make directory tree
-mkdir -p /usr/share/locale/es_MX/LC_MESSAGES &> /dev/null
-msgfmt -o /usr/share/locale/es_MX/LC_MESSAGES/raspberrymem.mo es_MX.po
 echo "Ahora se le pedirá en español"
 exec ./ui
 fi
-#we've reached this point, so an invalid language number was entered.
-exec ./langselect
+#we've reached this point, so an invalid LANGuage number was entered.
+exec ./LANGselect
