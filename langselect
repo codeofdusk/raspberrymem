@@ -33,7 +33,6 @@ mkdir /etc/raspberrymem.prefs/recurring-reminders
 touch /etc/raspberrymem.prefs/notes
 #find our USABLE_LANG and then create directory tree
 USABLE_LANG=$(echo $LANG | cut -d "." -f 1)
-echo "this is debug output : USABLE_LANG $USABLE_LANG"
 mkdir -p /usr/share/locale/$USABLE_LANG/LC_MESSAGES &> /dev/null
 if [ $sel = 1 ]
 then

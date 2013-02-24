@@ -21,6 +21,7 @@ fi
 #run keyboard navigation tutorial
 ./knt
 dialog --msgbox "$(gettext -s welcome)" 100 100
+gettext -s wait
 #prompt for tz selection
 ./tzsel
 #fill in my server for server host and register.
