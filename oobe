@@ -13,6 +13,13 @@
 gettext -s "depcheck"
 if [ ! "$1" == "--no-depcheck" ]
 then
+#distribution update
+which apt-get &> /dev/null
+if [ "$?" == "0" ]
+then
+apt-get -qqqqq --force-yes -yy update
+apt-get --force-yes --fix-missing -qqqqq -yy dist-upgrade
+fi 
 ./installpkg espeak espeakup xorg gnome-orca
 ./installpkg  sox  alsa-base alsa-utils gnome-session-fallback 
 fi

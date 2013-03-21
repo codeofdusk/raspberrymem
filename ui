@@ -14,8 +14,16 @@ export TEXTDOMAIN="raspberrymem"
 #export current raspberrymem location to a variable for execution of cron jobs and other scripts
 export raspberrymem_location="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 #version number, edit for new releases
-export version="3.0"
+export version="3.0.1"
 UITEXT="$(gettext -s cliver) $version $(gettext -s uitext)"
+#boot sequence
+echo "loading"
+echo "carga"
+./installpkg sox
+
+cat boot.logo
+play -q intro.ogg &> /dev/null
+clear
 #start the notification daemon
 ./notificationd &
 if [ -d /etc/raspberrymem.prefs ]

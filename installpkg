@@ -24,9 +24,7 @@ fi
 which apt-get &> /dev/null
 if [ $? == 0 ]
 then
-#update headers for good measure
-apt-get -qqqqq update
-exec apt-get --force-yes -qqqqq -y install $@
+exec apt-get --fix-missing --force-yes -qqqqq -yy install $@
 fi
 #fedora/red hat/CENT OS
 which yum &> /dev/null
