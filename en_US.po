@@ -232,7 +232,7 @@ msgstr "Please wait"
 msgid "uitext"
 msgstr "you are at the main menu. Use the arrow keys to find an option, and then press enter to select it. Note that this is a menu, and so you can't just type into it."
 msgid "cliver"
-msgstr "client version"
+msgstr "client revision"
 
 msgid "startx"
 msgstr "graphical desktop"

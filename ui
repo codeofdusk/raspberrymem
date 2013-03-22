@@ -13,9 +13,13 @@
 export TEXTDOMAIN="raspberrymem"
 #export current raspberrymem location to a variable for execution of cron jobs and other scripts
 export raspberrymem_location="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-#version number, edit for new releases
-export version="3.0.1"
-UITEXT="$(gettext -s cliver) $version $(gettext -s uitext)"
+which bzr &> /dev/null
+if [ "$?" == "0" ]
+then
+UITEXT="$(gettext -s cliver) $(bzr revno) $(gettext -s uitext)"
+else
+UITEXT="$(gettext -s uitext)"
+fi
 #boot sequence
 echo "loading"
 echo "carga"
@@ -44,7 +48,11 @@ then
 fi
 #merge latest code from bzr
 gettext -s wait
+which bzr &> /dev/null
+if [ "$?" == "0" ]
+then
 bzr update &> /dev/null
+fi
 #insure we have a recurring-reminders directory
 if [ ! -d /etc/raspberrymem.prefs/recurring-reminders ]
 then
