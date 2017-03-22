@@ -16,7 +16,7 @@ export raspberrymem_location="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 which bzr &> /dev/null
 if [ "$?" == "0" ]
 then
-UITEXT="$(gettext -s cliver) $(bzr revno) $(gettext -s uitext)"
+UITEXT="$(gettext -s cliver) EOL $(gettext -s uitext)"
 else
 UITEXT="$(gettext -s uitext)"
 fi
@@ -51,7 +51,7 @@ gettext -s wait
 which bzr &> /dev/null
 if [ "$?" == "0" ]
 then
-bzr update &> /dev/null
+git pull &> /dev/null
 fi
 #insure we have a recurring-reminders directory
 if [ ! -d /etc/raspberrymem.prefs/recurring-reminders ]

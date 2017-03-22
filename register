@@ -17,7 +17,9 @@ fi
 export server_host=$(cat /etc/raspberrymem.prefs/server_host)
 gettext -s "registermsg"
 #register and then print the device ID to the correct file.
-echo "register" | nc $server_host 7777 &> /etc/raspberrymem.prefs/deviceid
+# Disabled for EOL release, uncomment next line and comment line after that to re-enable.
+#echo "register" | nc $server_host 7777 &> /etc/raspberrymem.prefs/deviceid
+echo "EOL" > /etc/raspberrymem.prefs/deviceid
 if [ $? != 0 ]
 then
 dialog --msgbox "$(gettext -s registerfailedmsg)" 50 50
