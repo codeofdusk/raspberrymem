@@ -9,6 +9,8 @@
 #GNU General Public License for more details.
 #You should have received a copy of the GNU General Public License
 #along with raspberrymem.  If not, see http://www.gnu.org/licenses
+#Post-EOL patch: comment the next line to re-enable this feature!
+exit 0
 #declare variables
 export SERVER_HOST=$(cat /etc/raspberrymem.prefs/server_host)
 #and we're off!
