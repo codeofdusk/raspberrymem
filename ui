@@ -13,16 +13,10 @@
 export TEXTDOMAIN="raspberrymem"
 #export current raspberrymem location to a variable for execution of cron jobs and other scripts
 export raspberrymem_location="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-which bzr &> /dev/null
-if [ "$?" == "0" ]
-then
 UITEXT="$(gettext -s cliver) EOL $(gettext -s uitext)"
-else
-UITEXT="$(gettext -s uitext)"
-fi
 #boot sequence
 echo "loading"
-echo "carga"
+echo "cargando"
 ./installpkg sox
 
 cat boot.logo
@@ -46,9 +40,9 @@ if [ ! -f /etc/raspberrymem.prefs/oobe-complete ]
 then
 ./oobe $1
 fi
-#merge latest code from bzr
+#merge latest code from git
 gettext -s wait
-which bzr &> /dev/null
+which git &> /dev/null
 if [ "$?" == "0" ]
 then
 git pull &> /dev/null
